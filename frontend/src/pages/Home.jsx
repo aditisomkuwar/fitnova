@@ -228,7 +228,7 @@ function Features() {
 function Footer() {
   return (
     <footer className="bg-[#030712] border-t border-cyan-400/20 mt-20">
-      <div className="text-center py-6 sm:py-8 text-gray-500 text-sm sm:text-md tracking-wide">
+      <div className="text-center py-1 sm:py-1 text-gray-500 text-sm sm:text-md tracking-wide">
         © {new Date().getFullYear()} HealthUP • All Rights reserved.
       </div>
     </footer>
