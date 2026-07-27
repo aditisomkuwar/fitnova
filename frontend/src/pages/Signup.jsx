@@ -203,7 +203,7 @@ const Signup = () => {
       </div>
       <footer className="bg-[#030712] text-white border-t border-cyan-400/20">
         {/* Footer */}
-        <div className="border-t border-white/10 text-center py-6 text-gray-500 text-md">
+        <div className="border-t border-white/10 text-center py-1 text-gray-500 text-md">
           © {new Date().getFullYear()} HealthUP • All Rights reserved.
         </div>
       </footer>
