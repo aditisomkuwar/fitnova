@@ -13,7 +13,7 @@ import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import api from "../../config/Api";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/fitvia.png";
 
 const menuItems = [
   {

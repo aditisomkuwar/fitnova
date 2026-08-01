@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import api from "../config/Api";
 import toast from "react-hot-toast";
 import { useAuth } from "../context/AuthContext";
-import logo from "../assets/logo.png";
+import logo from "../assets/fitvia.png";
 
 const AiChatWidget = ({ chatOpen, setChatOpen }) => {
   const navigate = useNavigate();
