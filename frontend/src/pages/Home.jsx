@@ -35,14 +35,8 @@ import {
 const Home = () => {
   return (
     <div
-      className="min-h-screen bg-[#030712] text-white relative overflow-hidden"
-      style={{
-        fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif",
-        '--primary': '#eab892',
-        '--mid': '#c2703a',
-        '--dark': '#8b4a26',
-        '--accent': '#a85a2b'
-      }}
+      className="min-h-screen bg-[#0F1115] text-white relative overflow-hidden"
+      style={{ fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif" }}
     >
       {/* Global fonts + custom keyframes (kept local to this file, Tailwind-only elsewhere) */}
       <style>{`
@@ -116,10 +110,10 @@ export default Home;
 function AuroraBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      <div className="absolute -top-40 -left-40 w-xl h-144 bg-[#a85a2b]/20 rounded-full blur-[120px] animate-aurora-1" />
-      <div className="absolute top-1/3 -right-40 w-160 h-160 bg-[#6b3a1f]/20 rounded-full blur-[130px] animate-aurora-2" />
-      <div className="absolute bottom-0 left-1/4 w-lg h-128 bg-[#3f4652]/15 rounded-full blur-[120px] animate-aurora-3" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(194,112,58,0.08),transparent_50%)]" />
+      <div className="absolute -top-40 -left-40 w-xl h-144 bg-[#8C4A2F]/20 rounded-full blur-[120px] animate-aurora-1" />
+      <div className="absolute top-1/3 -right-40 w-160 h-160 bg-[#8C4A2F]/20 rounded-full blur-[130px] animate-aurora-2" />
+      <div className="absolute bottom-0 left-1/4 w-lg h-128 bg-[#181818]/15 rounded-full blur-[120px] animate-aurora-3" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(198,123,82,0.08),transparent_50%)]" />
     </div>
   );
 }
@@ -130,7 +124,7 @@ function GridOverlay() {
       className="pointer-events-none absolute inset-0 opacity-[0.07]"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(216,138,82,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(216,138,82,0.5) 1px, transparent 1px)",
+          "linear-gradient(rgba(198,123,82,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(198,123,82,0.5) 1px, transparent 1px)",
         backgroundSize: "48px 48px",
         maskImage: "radial-gradient(ellipse 80% 60% at 50% 20%, black, transparent)",
       }}
@@ -150,7 +144,7 @@ function Particles() {
         return (
           <span
             key={i}
-            className="animate-particle absolute rounded-full bg-[#eab892]/40"
+            className="animate-particle absolute rounded-full bg-[#E6B18A]/40"
             style={{
               left: `${left}%`,
               bottom: "-20px",
@@ -199,10 +193,10 @@ function Hero() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="space-y-8 text-center md:text-left"
       >
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#c2703a]/30 bg-[#c2703a]/5 text-[#e3a873] text-xs sm:text-sm font-medium backdrop-blur-xl">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C67B52]/30 bg-[#C67B52]/5 text-[#F3D0B2] text-xs sm:text-sm font-medium backdrop-blur-xl">
           <span className="relative flex h-1.5 w-1.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#c2703a] opacity-75" />
-            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#c2703a]" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C67B52] opacity-75" />
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#C67B52]" />
           </span>
           Powered by real-time health AI
         </div>
@@ -210,7 +204,7 @@ function Hero() {
         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
           <span className="text-white">Your body,</span>
           <br />
-          <span style={{ background: 'linear-gradient(90deg, var(--primary), var(--mid), var(--dark))', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>
+          <span className="bg-linear-to-r from-[#E6B18A] via-[#C67B52] to-[#8C4A2F] bg-clip-text text-transparent">
             decoded and optimized
           </span>
         </h1>
@@ -229,7 +223,7 @@ function Hero() {
 
         <div className="flex items-center gap-6 justify-center md:justify-start pt-4 text-gray-500 text-xs sm:text-sm">
           <div className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-[#c2703a]" />
+            <ShieldCheck className="w-4 h-4 text-[#C67B52]" />
             HIPAA-aware &amp; encrypted
           </div>
           <div className="hidden sm:block w-px h-4 bg-white/10" />
@@ -245,18 +239,18 @@ function Hero() {
         className="relative flex justify-center items-center"
         style={{ perspective: "1000px" }}
       >
-        <div className="absolute w-72 sm:w-96 h-72 sm:h-96 bg-[#a85a2b]/20 rounded-full blur-3xl animate-float-slow" />
-        <div className="absolute w-56 sm:w-72 h-56 sm:h-72 bg-[#6b3a1f]/15 rounded-full blur-3xl animate-float translate-x-16 translate-y-10" />
+        <div className="absolute w-72 sm:w-96 h-72 sm:h-96 bg-[#8C4A2F]/20 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute w-56 sm:w-72 h-56 sm:h-72 bg-[#8C4A2F]/15 rounded-full blur-3xl animate-float translate-x-16 translate-y-10" />
 
         <div
           ref={cardRef}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-          className="relative w-full max-w-sm sm:max-w-md bg-white/4 backdrop-blur-3xl border border-white/10 p-5 sm:p-7 rounded-3xl shadow-[0_0_60px_rgba(194,112,58,0.15)] overflow-hidden transition-transform duration-200 ease-out"
+          className="relative w-full max-w-sm sm:max-w-md bg-white/4 backdrop-blur-3xl border border-white/10 p-5 sm:p-7 rounded-3xl shadow-[0_0_60px_rgba(198,123,82,0.15)] overflow-hidden transition-transform duration-200 ease-out"
           style={{ transformStyle: "preserve-3d" }}
         >
           <div className="absolute inset-0 pointer-events-none">
-            <div className="w-full h-20 bg-linear-to-b from-transparent via-[#c2703a]/10 to-transparent animate-scan" />
+            <div className="w-full h-20 bg-linear-to-b from-transparent via-[#C67B52]/10 to-transparent animate-scan" />
           </div>
 
           <div className="relative z-10 space-y-5">
@@ -270,12 +264,12 @@ function Hero() {
                   Updated 2 min ago
                 </div>
               </div>
-              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#c2703a]/10 border border-[#c2703a]/20">
+              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#C67B52]/10 border border-[#C67B52]/20">
                 <span className="relative flex h-1.5 w-1.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#c2703a] opacity-75" />
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#c2703a]" />
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C67B52] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#C67B52]" />
                 </span>
-                <span className="text-[#e3a873] text-[10px] sm:text-xs font-medium">
+                <span className="text-[#F3D0B2] text-[10px] sm:text-xs font-medium">
                   Live
                 </span>
               </div>
@@ -283,24 +277,23 @@ function Hero() {
 
             {/* Rings row */}
             <div className="flex items-center justify-between px-1">
-              <RingMetric value={82} label="Recovery" gradientId="ringRecovery" colorFrom="#e3a873" colorTo="#c2703a" />
-              <RingMetric value={68} label="Sleep" gradientId="ringSleep" colorFrom="#c2703a" colorTo="#8b4a26" />
-              <RingMetric value={91} label="Adherence" gradientId="ringAdherence" colorFrom="#eab892" colorTo="#e3a873" />
+              <RingMetric value={82} label="Recovery" gradientId="ringRecovery" colorFrom="#F3D0B2" colorTo="#C67B52" />
+              <RingMetric value={68} label="Sleep" gradientId="ringSleep" colorFrom="#C67B52" colorTo="#8C4A2F" />
+              <RingMetric value={91} label="Adherence" gradientId="ringAdherence" colorFrom="#E6B18A" colorTo="#F3D0B2" />
             </div>
 
             {/* Daily progress bar */}
             <div className="space-y-1.5">
               <div className="flex justify-between text-[11px] sm:text-xs text-gray-400">
                 <span>Daily Progress</span>
-                <span className="text-[#e3a873] font-medium">78%</span>
+                <span className="text-[#F3D0B2] font-medium">78%</span>
               </div>
               <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: "78%" }}
                   transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
-                  className="h-full rounded-full"
-                  style={{ background: 'linear-gradient(90deg, var(--mid), #d68a52, var(--dark))' }}
+                  className="h-full bg-linear-to-r from-[#E6B18A] via-[#C67B52] to-[#8C4A2F] rounded-full"
                 />
               </div>
             </div>
@@ -309,18 +302,18 @@ function Hero() {
             <div className="grid grid-cols-2 gap-3">
               <MetricTile icon={HeartPulse} label="Heart Rate" value="68" unit="bpm" tint="text-rose-300" />
               <MetricTile icon={Flame} label="Calories" value="1,842" unit="kcal" tint="text-orange-300" />
-              <MetricTile icon={Activity} label="BMI" value="22.4" unit="normal" tint="text-[#f0c9a0]" />
-              <MetricTile icon={Droplet} label="Water" value="2.1" unit="L / 3L" tint="text-[#cbb8a3]" />
+              <MetricTile icon={Activity} label="BMI" value="22.4" unit="normal" tint="text-[#F3D0B2]" />
+              <MetricTile icon={Droplet} label="Water" value="2.1" unit="L / 3L" tint="text-[#E6B18A]" />
             </div>
 
             {/* AI recommendation */}
-            <div className="relative rounded-2xl p-px" style={{ background: 'linear-gradient(90deg, rgba(194,112,58,0.25), rgba(214,138,82,0.25), rgba(139,74,38,0.25))' }}>
-              <div className="rounded-2xl bg-[#030712]/90 backdrop-blur-xl p-3.5 flex gap-3 items-start">
-                <div className="shrink-0 w-7 h-7 rounded-lg bg-[#c2703a]/10 border border-[#c2703a]/20 flex items-center justify-center">
-                  <Sparkles className="w-3.5 h-3.5 text-[#e3a873]" />
+            <div className="relative rounded-2xl p-px bg-linear-to-r from-[#E6B18A]/50 via-[#C67B52]/50 to-[#8C4A2F]/50">
+              <div className="rounded-2xl bg-[#0F1115]/90 backdrop-blur-xl p-3.5 flex gap-3 items-start">
+                <div className="shrink-0 w-7 h-7 rounded-lg bg-[#C67B52]/10 border border-[#C67B52]/20 flex items-center justify-center">
+                  <Sparkles className="w-3.5 h-3.5 text-[#F3D0B2]" />
                 </div>
                 <div>
-                  <div className="text-[11px] sm:text-xs font-semibold text-[#e3a873] mb-0.5">
+                  <div className="text-[11px] sm:text-xs font-semibold text-[#F3D0B2] mb-0.5">
                     AI Recommendation
                   </div>
                   <p className="text-[11px] sm:text-xs text-gray-400 leading-relaxed">
@@ -385,7 +378,7 @@ function RingMetric({ value, label, gradientId, colorFrom, colorTo }) {
 
 function MetricTile({ icon: Icon, label, value, unit, tint }) {
   return (
-    <div className="bg-white/3 border border-white/10 rounded-xl p-3 hover:bg-white/6 hover:border-[#c2703a]/20 transition-colors duration-300">
+    <div className="bg-white/3 border border-white/10 rounded-xl p-3 hover:bg-white/6 hover:border-[#C67B52]/20 transition-colors duration-300">
       <div className="flex items-center gap-1.5 mb-1.5">
         <Icon className={`w-3.5 h-3.5 ${tint}`} />
         <span className="text-[10px] sm:text-[11px] text-gray-500">{label}</span>
@@ -402,8 +395,7 @@ function PrimaryButton({ to, children }) {
   return (
     <Link
       to={to}
-      className="group relative inline-flex items-center justify-center gap-2 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-semibold text-sm sm:text-base text-[#030712] overflow-hidden transition-transform duration-300 hover:scale-[1.03]"
-      style={{ background: 'linear-gradient(90deg, var(--mid), #d68a52, var(--dark))', boxShadow: '0 0 30px rgba(194,112,58,0.35)' }}
+      className="group relative inline-flex items-center justify-center gap-2 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-semibold text-sm sm:text-base text-[#0F1115] bg-linear-to-r from-[#E6B18A] via-[#C67B52] to-[#8C4A2F] overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-[0_0_30px_rgba(198,123,82,0.4)] hover:shadow-[0_0_45px_rgba(198,123,82,0.6)]"
     >
       <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-linear-to-r from-transparent via-white/40 to-transparent skew-x-12" />
       <span className="relative flex items-center gap-2">{children}</span>
@@ -415,7 +407,7 @@ function SecondaryButton({ to, children }) {
   return (
     <Link
       to={to}
-      className="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full border border-white/15 text-gray-200 hover:text-white hover:bg-white/5 hover:border-[#c2703a]/30 transition-all duration-300 text-sm sm:text-base backdrop-blur-xl"
+      className="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full border border-white/15 text-gray-200 hover:text-white hover:bg-white/5 hover:border-[#C67B52]/30 transition-all duration-300 text-sm sm:text-base backdrop-blur-xl"
     >
       {children}
     </Link>
@@ -440,7 +432,7 @@ function HowItWorks() {
 
       <div className="relative max-w-7xl mx-auto mt-16 sm:mt-20">
         {/* connecting line, desktop only */}
-        <div className="hidden lg:block absolute top-8 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(194,112,58,0.25), transparent)' }} />
+        <div className="hidden lg:block absolute top-8 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#C67B52]/40 to-transparent" />
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8">
           {steps.map((step, i) => (
@@ -452,9 +444,9 @@ function HowItWorks() {
               transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
               className="relative flex flex-col items-center text-center group"
             >
-              <div className="relative z-10 w-16 h-16 rounded-2xl bg-white/4 border border-white/10 flex items-center justify-center mb-5 backdrop-blur-xl group-hover:border-[#c2703a]/40 group-hover:bg-[#c2703a]/5 transition-all duration-300 group-hover:-translate-y-1 shadow-[0_0_0_rgba(0,0,0,0)] group-hover:shadow-[0_0_25px_rgba(216,138,82,0.25)]">
-                <step.icon className="w-6 h-6 text-[#eab892]" />
-                <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#030712] border border-[#c2703a]/30 text-[#e3a873] text-[10px] font-semibold flex items-center justify-center">
+              <div className="relative z-10 w-16 h-16 rounded-2xl bg-white/4 border border-white/10 flex items-center justify-center mb-5 backdrop-blur-xl group-hover:border-[#C67B52]/40 group-hover:bg-[#C67B52]/5 transition-all duration-300 group-hover:-translate-y-1 shadow-[0_0_0_rgba(0,0,0,0)] group-hover:shadow-[0_0_25px_rgba(198,123,82,0.25)]">
+                <step.icon className="w-6 h-6 text-[#E6B18A]" />
+                <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#0F1115] border border-[#C67B52]/30 text-[#F3D0B2] text-[10px] font-semibold flex items-center justify-center">
                   {i + 1}
                 </span>
               </div>
@@ -478,12 +470,12 @@ function HowItWorks() {
 
 function Features() {
   const features = [
-    { icon: Dumbbell, title: "Adaptive Workouts", desc: "Plans auto-adjust using fatigue & adherence data.", accent: "from-[#c2703a]/20 to-[#d68a52]/20" },
-    { icon: Utensils, title: "Smart Diet Generator", desc: "Macro-based personalized nutrition engine.", accent: "from-[#d68a52]/20 to-[#8b4a26]/20" },
-    { icon: Brain, title: "Habit Intelligence", desc: "Consistency scoring & drop-off detection.", accent: "from-[#8b4a26]/20 to-[#94a3b8]/20" },
-    { icon: LineChart, title: "Progress Analytics", desc: "Weight trends & measurement tracking.", accent: "from-[#94a3b8]/20 to-[#c2703a]/20" },
-    { icon: BatteryCharging, title: "Energy Monitoring", desc: "Prevent overtraining with smart recovery.", accent: "from-[#c2703a]/20 to-[#8b4a26]/20" },
-    { icon: Target, title: "Goal Forecast", desc: "Predict timeline to reach your target.", accent: "from-[#d68a52]/20 to-[#94a3b8]/20" },
+    { icon: Dumbbell, title: "Adaptive Workouts", desc: "Plans auto-adjust using fatigue & adherence data.", accent: "from-[#E6B18A]/20 to-[#C67B52]/20" },
+    { icon: Utensils, title: "Smart Diet Generator", desc: "Macro-based personalized nutrition engine.", accent: "from-[#C67B52]/20 to-[#8C4A2F]/20" },
+    { icon: Brain, title: "Habit Intelligence", desc: "Consistency scoring & drop-off detection.", accent: "from-[#8C4A2F]/20 to-[#9CA3AF]/20" },
+    { icon: LineChart, title: "Progress Analytics", desc: "Weight trends & measurement tracking.", accent: "from-[#9CA3AF]/20 to-[#C67B52]/20" },
+    { icon: BatteryCharging, title: "Energy Monitoring", desc: "Prevent overtraining with smart recovery.", accent: "from-[#C67B52]/20 to-[#8C4A2F]/20" },
+    { icon: Target, title: "Goal Forecast", desc: "Predict timeline to reach your target.", accent: "from-[#C67B52]/20 to-[#9CA3AF]/20" },
   ];
 
   return (
@@ -498,13 +490,13 @@ function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: (i % 3) * 0.08, ease: "easeOut" }}
-            className="group relative rounded-3xl p-px bg-linear-to-br from-white/10 to-white/0 hover:from-[#c2703a]/40 hover:to-[#8b4a26]/20 transition-all duration-300"
+            className="group relative rounded-3xl p-px bg-linear-to-br from-white/10 to-white/0 hover:from-[#C67B52]/40 hover:to-[#8C4A2F]/20 transition-all duration-300"
           >
             <div className="relative h-full bg-white/3 backdrop-blur-2xl rounded-3xl p-8 sm:p-9 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:bg-white/5 overflow-hidden">
               <div className={`absolute -top-10 -right-10 w-32 h-32 rounded-full bg-linear-to-br ${f.accent} blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
-              <div className="relative w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-[#c2703a]/30 transition-colors duration-300">
-                <f.icon className="w-6 h-6 text-[#e3a873]" />
+              <div className="relative w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-[#C67B52]/30 transition-colors duration-300">
+                <f.icon className="w-6 h-6 text-[#F3D0B2]" />
               </div>
 
               <h3 className="relative text-lg sm:text-xl font-semibold mb-3 text-white font-display">
@@ -526,7 +518,7 @@ function Features() {
 function SectionHeading({ eyebrow, title }) {
   return (
     <div className="text-center max-w-2xl mx-auto">
-      <div className="text-[#e3a873] text-xs sm:text-sm font-medium tracking-[0.2em] uppercase mb-4">
+      <div className="text-[#F3D0B2] text-xs sm:text-sm font-medium tracking-[0.2em] uppercase mb-4">
         {eyebrow}
       </div>
       <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
@@ -548,7 +540,7 @@ function Footer() {
 
   return (
     <footer className="relative mt-12">
-      <div className="h-px w-full" style={{ background: 'linear-gradient(90deg, transparent, rgba(194,112,58,0.18), transparent)' }} />
+      <div className="h-px w-full bg-linear-to-r from-transparent via-[#C67B52]/30 to-transparent" />
       <div className="max-w-7xl mx-auto px-6 py-10 sm:py-12 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2.5">
           <img
@@ -556,7 +548,7 @@ function Footer() {
             alt="Fitvia"
             className="w-8 h-8 object-contain"
           />
-          <span className="font-display font-semibold text-sm sm:text-base" style={{ color: 'var(--primary)' }}>
+          <span className="font-display font-semibold text-white text-sm sm:text-base">
             Fitvia
           </span>
         </div>
@@ -567,7 +559,7 @@ function Footer() {
               key={s.label}
               href={s.href}
               aria-label={s.label}
-              className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#e3a873] hover:border-[#c2703a]/30 hover:bg-[#c2703a]/5 transition-all duration-300"
+              className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#F3D0B2] hover:border-[#C67B52]/30 hover:bg-[#C67B52]/5 transition-all duration-300"
             >
               <s.icon className="w-4 h-4" />
             </a>

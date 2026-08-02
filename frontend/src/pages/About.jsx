@@ -95,7 +95,7 @@ const About = () => {
               </span>
               <br />
               <span style={{ background: 'linear-gradient(90deg, var(--primary), var(--mid), var(--dark))', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>
-                HealthUP
+                Fitvia
               </span>
             </h1>
 
@@ -151,7 +151,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
-            className="grid gap-12 rounded-[32px] bg-white/[0.03] p-8 backdrop-blur-3xl shadow-[0_25px_60px_rgba(0,0,0,.35)] md:p-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16"
+            className="grid gap-12 rounded-4xl bg-white/3 p-8 backdrop-blur-3xl shadow-[0_25px_60px_rgba(0,0,0,.35)] md:p-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16"
             style={{ border: '1px solid rgba(194,112,58,0.18)' }}
           >
             {/* Illustration */}
@@ -163,7 +163,7 @@ const About = () => {
             <div>
               
               <span className="inline-block rounded-full px-4 py-2 text-xs uppercase tracking-[0.25em]" style={{ border: '1px solid rgba(194,112,58,0.28)', background: 'rgba(234,184,146,0.06)', color: 'var(--primary)' }}>
-                Why HealthUP
+                Why Fitvia
               </span>
 
               <h2 className="mt-6 text-4xl md:text-5xl font-bold font-display leading-tight">
@@ -220,7 +220,7 @@ const About = () => {
             </p>
             <h2 className="mt-4 text-4xl md:text-5xl font-bold font-display">
               <span style={{ background: 'linear-gradient(90deg, #FFFFFF, var(--primary), var(--mid))', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>
-                What Makes HealthUP Different
+                What Makes Fitvia Different
               </span>
             </h2>
           </div>
@@ -246,7 +246,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
-            className="relative overflow-hidden rounded-[32px] bg-white/[0.03] p-10 backdrop-blur-3xl shadow-[0_20px_60px_rgba(0,0,0,.35)]"
+            className="relative overflow-hidden rounded-4xl bg-white/3 p-10 backdrop-blur-3xl shadow-[0_20px_60px_rgba(0,0,0,.35)]"
             style={{ border: '1px solid rgba(194,112,58,0.18)' }}
           >
             <p className="text-sm uppercase tracking-[0.3em]" style={{ color: 'var(--primary)' }}>
@@ -286,7 +286,7 @@ const About = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group relative rounded-2xl p-[1px] transition-all duration-300"
+                className="group relative rounded-2xl p-px transition-all duration-300"
                 style={{ background: 'linear-gradient(90deg, rgba(255,255,255,0.06), rgba(234,184,146,0.04))' }}
               >
                 <div className="flex items-center gap-4 rounded-2xl bg-[#0F172A]/70 p-6 backdrop-blur-xl transition-transform duration-300 group-hover:translate-x-1.5">
@@ -313,7 +313,7 @@ const About = () => {
         >
           {/* animated glow border */}
           <div className="pointer-events-none absolute inset-0 rounded-[36px] opacity-60 animate-[spin_10s_linear_infinite]" style={{ background: 'conic-gradient(from 0deg, transparent, rgba(194,112,58,0.28), transparent 35%)' }} />
-          <div className="pointer-events-none absolute inset-[1px] rounded-[35px] bg-gradient-to-br from-[#0F172A] to-[#030712]" />
+          <div className="pointer-events-none absolute inset-px rounded-[35px] bg-linear-to-br from-[#0F172A] to-[#030712]" />
           <CtaParticles />
 
           <div className="relative z-10">
@@ -457,7 +457,7 @@ function HealthDashboardCard() {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ transformStyle: "preserve-3d", border: '1px solid rgba(194,112,58,0.18)' }}
-      className="relative overflow-hidden rounded-[32px] bg-white/[0.04] p-7 backdrop-blur-3xl shadow-[0_25px_60px_rgba(0,0,0,.35)] transition-transform duration-200 ease-out sm:p-8"
+      className="relative overflow-hidden rounded-4xl bg-white/4 p-7 backdrop-blur-3xl shadow-[0_25px_60px_rgba(0,0,0,.35)] transition-transform duration-200 ease-out sm:p-8"
     >
       <div className="pointer-events-none absolute inset-0">
         <div className="h-24 w-full animate-scan" style={{ background: 'linear-gradient(180deg, transparent, rgba(234,184,146,0.08), transparent)' }} />
@@ -488,16 +488,17 @@ function HealthDashboardCard() {
         </div>
 
         {/* Rings */}
-        <div className="flex items-center justify-between px-1">
-         <RingMetric
-  value={84}
-  label="Recovery"
-  from="var(--primary)"
-  to="var(--mid)"
-/>
-          <RingMetric value={74} label="Recovery" from="var(--mid)" to="var(--dark)" />
-          <RingMetric value={91} label="Activity" from="var(--primary)" to="var(--mid)" />
-        </div>{/*  */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 px-1">
+          <div className="mx-auto sm:mx-0">
+            <RingMetric value={84} label="Recovery" from="var(--primary)" to="var(--mid)" />
+          </div>
+          <div className="mx-auto sm:mx-0">
+            <RingMetric value={74} label="Recovery" from="var(--mid)" to="var(--dark)" />
+          </div>
+          <div className="mx-auto sm:mx-0">
+            <RingMetric value={91} label="Activity" from="var(--primary)" to="var(--mid)" />
+          </div>
+        </div>
 
         {/* Metric grid */}
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -522,7 +523,7 @@ function HealthDashboardCard() {
         </div>
 
         {/* AI recommendation */}
-        <div className="relative rounded-2xl p-[1px]" style={{ background: 'linear-gradient(90deg, rgba(234,184,146,0.25), rgba(194,112,58,0.25), rgba(139,74,38,0.25))' }}>
+        <div className="relative rounded-2xl p-px" style={{ background: 'linear-gradient(90deg, rgba(234,184,146,0.25), rgba(194,112,58,0.25), rgba(139,74,38,0.25))' }}>
           <div className="flex items-start gap-3 rounded-2xl bg-[#030712]/90 p-3.5 backdrop-blur-xl">
             <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg" style={{ border: '1px solid rgba(194,112,58,0.18)', background: 'rgba(234,184,146,0.06)' }}>
               <Sparkles className="h-3.5 w-3.5" aria-hidden="true" style={{ color: 'var(--primary)' }} />
@@ -584,7 +585,7 @@ function RingMetric({ value, label, from, to }) {
 
 function MetricTile({ icon: Icon, label, value, unit }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3 transition-colors duration-300 hover:bg-white/[0.06]" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
+    <div className="rounded-xl border border-white/10 bg-white/3 p-3 transition-colors duration-300 hover:bg-white/6" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
       <div className="mb-1.5 flex items-center gap-1.5">
         <Icon className="h-3.5 w-3.5" aria-hidden="true" style={{ color: 'var(--primary)' }} />
         <span className="text-[10px] text-gray-500 sm:text-[11px]">{label}</span>
@@ -674,7 +675,7 @@ function StatCard({ icon: Icon, target, suffix, label, delay }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, delay }}
-      className="group relative rounded-2xl p-[1px] transition-all duration-300"
+      className="group relative rounded-2xl p-px transition-all duration-300"
       style={{ background: 'linear-gradient(135deg, rgba(234,184,146,0.18), rgba(194,112,58,0.12))' }}
     >
       <div className="relative flex h-full flex-col items-center rounded-2xl bg-[#0F172A]/70 p-6 text-center backdrop-blur-2xl transition-transform duration-300 group-hover:-translate-y-2" style={{ boxShadow: '0 20px 45px rgba(194,112,58,0.08)' }}>
@@ -722,8 +723,8 @@ function AiPulseIllustration({ compact = false }) {
   const size = compact ? 220 : 300;
   return (
     <div
-      className="relative flex items-center justify-center"
-      style={{ width: size, height: size }}
+      className="relative flex items-center justify-center mx-auto"
+      style={{ width: '100%', maxWidth: size, aspectRatio: '1 / 1', height: 'auto' }}
       aria-hidden="true"
     >
       {[0, 1, 2].map((i) => (
@@ -816,10 +817,10 @@ function RippleButton({ onClick, children }) {
   return (
     <button
       onClick={onClick}
-      className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-10 py-4 text-lg font-semibold text-[#030712] transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02]"
+      className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-2 overflow-hidden rounded-full px-10 py-4 text-lg font-semibold text-[#030712] transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02]"
       style={{ background: 'linear-gradient(90deg, var(--mid), #d68a52, var(--dark))', boxShadow: '0 15px 35px rgba(168,90,43,0.28)' }}
     >
-      <span className="pointer-events-none absolute inset-0 -translate-x-full skew-x-12 bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+      <span className="pointer-events-none absolute inset-0 -translate-x-full skew-x-12 bg-linear-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
       <span className="relative flex items-center gap-2">{children}</span>
     </button>
   );
@@ -829,7 +830,7 @@ function GhostButton({ onClick, children }) {
   return (
     <button
       onClick={onClick}
-      className="rounded-full px-10 py-4 text-lg font-semibold backdrop-blur-xl transition-all duration-300"
+      className="rounded-full w-full sm:w-auto px-10 py-4 text-lg font-semibold backdrop-blur-xl transition-all duration-300"
       style={{ border: '1px solid rgba(194,112,58,0.22)', color: 'var(--primary)', background: 'transparent' }}
     >
       {children}
