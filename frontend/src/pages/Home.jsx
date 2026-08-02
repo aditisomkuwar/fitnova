@@ -1,11 +1,103 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  UserPlus,
+  Sparkles,
+  Activity,
+  BarChart3,
+  SlidersHorizontal,
+  Bot,
+  Dumbbell,
+  Utensils,
+  Brain,
+  LineChart,
+  BatteryCharging,
+  Target,
+  HeartPulse,
+  Flame,
+  Droplet,
+  Moon,
+  ShieldCheck,
+  ArrowRight,
+  Github,
+  Twitter,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
+
+/**
+ * Fitvia — premium AI healthcare & fitness landing page.
+ * Design language: dark glass, aurora gradients in brushed copper/bronze,
+ * restrained motion, and a signature "live analytics" dashboard as the hero's centerpiece.
+ */
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-[#030712] text-white relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(168,85,247,0.25),transparent_40%),radial-gradient(circle_at_75%_75%,rgba(59,130,246,0.25),transparent_40%)]" />
+    <div
+      className="min-h-screen bg-[#030712] text-white relative overflow-hidden"
+      style={{
+        fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif",
+        '--primary': '#eab892',
+        '--mid': '#c2703a',
+        '--dark': '#8b4a26',
+        '--accent': '#a85a2b'
+      }}
+    >
+      {/* Global fonts + custom keyframes (kept local to this file, Tailwind-only elsewhere) */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+        .font-display { font-family: 'Space Grotesk', 'Inter', ui-sans-serif, sans-serif; }
+
+        @keyframes aurora-drift-1 {
+          0%, 100% { transform: translate(0%, 0%) scale(1); }
+          50% { transform: translate(6%, 8%) scale(1.15); }
+        }
+        @keyframes aurora-drift-2 {
+          0%, 100% { transform: translate(0%, 0%) scale(1); }
+          50% { transform: translate(-8%, -4%) scale(1.1); }
+        }
+        @keyframes aurora-drift-3 {
+          0%, 100% { transform: translate(0%, 0%) scale(1); }
+          50% { transform: translate(4%, -10%) scale(1.08); }
+        }
+        .animate-aurora-1 { animation: aurora-drift-1 18s ease-in-out infinite; }
+        .animate-aurora-2 { animation: aurora-drift-2 22s ease-in-out infinite; }
+        .animate-aurora-3 { animation: aurora-drift-3 26s ease-in-out infinite; }
+
+        @keyframes float-y {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-14px); }
+        }
+        .animate-float { animation: float-y 6s ease-in-out infinite; }
+        .animate-float-slow { animation: float-y 9s ease-in-out infinite; }
+
+        @keyframes scan {
+          0% { transform: translateY(-100%); }
+          100% { transform: translateY(600%); }
+        }
+        .animate-scan { animation: scan 5s linear infinite; }
+
+        @keyframes particle-rise {
+          0% { transform: translateY(0) translateX(0); opacity: 0; }
+          10% { opacity: 0.6; }
+          90% { opacity: 0.3; }
+          100% { transform: translateY(-620px) translateX(20px); opacity: 0; }
+        }
+        .animate-particle { animation: particle-rise linear infinite; }
+
+        @media (prefers-reduced-motion: reduce) {
+          .animate-aurora-1, .animate-aurora-2, .animate-aurora-3,
+          .animate-float, .animate-float-slow, .animate-scan, .animate-particle {
+            animation: none !important;
+          }
+        }
+      `}</style>
+
+      <AuroraBackground />
+      <GridOverlay />
+      <Particles />
 
       <div className="relative z-10">
         <Hero />
@@ -19,6 +111,61 @@ const Home = () => {
 
 export default Home;
 
+/* ================= AMBIENT BACKGROUND ================= */
+
+function AuroraBackground() {
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div className="absolute -top-40 -left-40 w-xl h-144 bg-[#a85a2b]/20 rounded-full blur-[120px] animate-aurora-1" />
+      <div className="absolute top-1/3 -right-40 w-160 h-160 bg-[#6b3a1f]/20 rounded-full blur-[130px] animate-aurora-2" />
+      <div className="absolute bottom-0 left-1/4 w-lg h-128 bg-[#3f4652]/15 rounded-full blur-[120px] animate-aurora-3" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(194,112,58,0.08),transparent_50%)]" />
+    </div>
+  );
+}
+
+function GridOverlay() {
+  return (
+    <div
+      className="pointer-events-none absolute inset-0 opacity-[0.07]"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(216,138,82,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(216,138,82,0.5) 1px, transparent 1px)",
+        backgroundSize: "48px 48px",
+        maskImage: "radial-gradient(ellipse 80% 60% at 50% 20%, black, transparent)",
+      }}
+    />
+  );
+}
+
+function Particles() {
+  const particles = Array.from({ length: 14 });
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden hidden md:block">
+      {particles.map((_, i) => {
+        const left = (i * 137.5) % 100; // deterministic pseudo-random spread
+        const delay = (i % 7) * 1.3;
+        const duration = 14 + (i % 5) * 3;
+        const size = i % 3 === 0 ? 3 : 2;
+        return (
+          <span
+            key={i}
+            className="animate-particle absolute rounded-full bg-[#eab892]/40"
+            style={{
+              left: `${left}%`,
+              bottom: "-20px",
+              width: `${size}px`,
+              height: `${size}px`,
+              animationDelay: `${delay}s`,
+              animationDuration: `${duration}s`,
+            }}
+          />
+        );
+      })}
+    </div>
+  );
+}
+
 /* ================= HERO ================= */
 
 function Hero() {
@@ -26,18 +173,15 @@ function Hero() {
 
   const handleMouseMove = (e) => {
     if (window.innerWidth < 768) return; // disable tilt on mobile
-
     const card = cardRef.current;
+    if (!card) return;
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-
-    const rotateX = ((y - centerY) / centerY) * -8;
-    const rotateY = ((x - centerX) / centerX) * 8;
-
+    const rotateX = ((y - centerY) / centerY) * -6;
+    const rotateY = ((x - centerX) / centerX) * 6;
     card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   };
 
@@ -47,109 +191,234 @@ function Hero() {
   };
 
   return (
-    <section className="min-h-screen grid md:grid-cols-2 items-center px-6 sm:px-10 md:px-20 py-20 gap-16">
+    <section className="min-h-screen grid md:grid-cols-2 items-center px-6 sm:px-10 md:px-20 py-24 md:py-20 gap-16">
       {/* LEFT SIDE */}
-      <div className="space-y-8 text-center md:text-left">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
-          <span className="bg-linear-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
-            Adaptive Fitness Intelligence
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="space-y-8 text-center md:text-left"
+      >
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#c2703a]/30 bg-[#c2703a]/5 text-[#e3a873] text-xs sm:text-sm font-medium backdrop-blur-xl">
+          <span className="relative flex h-1.5 w-1.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#c2703a] opacity-75" />
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#c2703a]" />
+          </span>
+          Powered by real-time health AI
+        </div>
+
+        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
+          <span className="text-white">Your body,</span>
+          <br />
+          <span style={{ background: 'linear-gradient(90deg, var(--primary), var(--mid), var(--dark))', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>
+            decoded and optimized
           </span>
         </h1>
 
         <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
-          AI-powered workout and nutrition plans that adapt to your habits,
-          fatigue levels, and real-world progress.
+          Fitvia reads your training, recovery, and nutrition signals in real
+          time — then rewrites your plan the moment your body asks for it.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
-          <Link
-            to="/signup"
-            className="px-8 sm:px-10 py-3 sm:py-4 rounded-full font-semibold bg-linear-to-r from-purple-500 to-cyan-500 hover:scale-105 transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.6)] text-sm sm:text-base"
-          >
-            Start Free
-          </Link>
-
-          <Link
-            to="/about"
-            className="px-8 sm:px-10 py-3 sm:py-4 rounded-full border border-cyan-400/30 text-cyan-300 hover:bg-cyan-400/10 transition-all duration-300 text-sm sm:text-base"
-          >
-            Learn More
-          </Link>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
+          <PrimaryButton to="/signup">
+            Start Free <ArrowRight className="w-4 h-4" />
+          </PrimaryButton>
+          <SecondaryButton to="/about">Learn More</SecondaryButton>
         </div>
-      </div>
 
-      {/* RIGHT SIDE – DASHBOARD */}
-      <div className="relative flex justify-center items-center perspective-1000">
-        {/* Glow */}
-        <div className="absolute w-72 sm:w-96 h-72 sm:h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="flex items-center gap-6 justify-center md:justify-start pt-4 text-gray-500 text-xs sm:text-sm">
+          <div className="flex items-center gap-1.5">
+            <ShieldCheck className="w-4 h-4 text-[#c2703a]" />
+            HIPAA-aware &amp; encrypted
+          </div>
+          <div className="hidden sm:block w-px h-4 bg-white/10" />
+          <div className="hidden sm:block">Trusted by 40k+ athletes</div>
+        </div>
+      </motion.div>
+
+      {/* RIGHT SIDE – AI DASHBOARD */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
+        className="relative flex justify-center items-center"
+        style={{ perspective: "1000px" }}
+      >
+        <div className="absolute w-72 sm:w-96 h-72 sm:h-96 bg-[#a85a2b]/20 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute w-56 sm:w-72 h-56 sm:h-72 bg-[#6b3a1f]/15 rounded-full blur-3xl animate-float translate-x-16 translate-y-10" />
 
         <div
           ref={cardRef}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-          className="relative w-full max-w-sm sm:max-w-md bg-white/5 backdrop-blur-3xl border border-cyan-400/20 p-6 sm:p-8 md:p-10 rounded-3xl shadow-[0_0_40px_rgba(59,130,246,0.4)] overflow-hidden transition-transform duration-200 ease-out"
+          className="relative w-full max-w-sm sm:max-w-md bg-white/4 backdrop-blur-3xl border border-white/10 p-5 sm:p-7 rounded-3xl shadow-[0_0_60px_rgba(194,112,58,0.15)] overflow-hidden transition-transform duration-200 ease-out"
           style={{ transformStyle: "preserve-3d" }}
         >
-          {/* GRID OVERLAY */}
-          <div className="absolute inset-0 pointer-events-none opacity-20 bg-[linear-gradient(rgba(0,255,255,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.2)_1px,transparent_1px)] bg-size-[25px_25px] sm:bg-size-[30px_30px]" />
-
-          {/* SCANNING LINE */}
           <div className="absolute inset-0 pointer-events-none">
-            <div className="w-full h-16 sm:h-24 bg-linear-to-b from-transparent via-cyan-400/30 to-transparent animate-scan" />
+            <div className="w-full h-20 bg-linear-to-b from-transparent via-[#c2703a]/10 to-transparent animate-scan" />
           </div>
 
-          {/* CONTENT */}
-          <div className="relative z-10 space-y-6 sm:space-y-8">
+          <div className="relative z-10 space-y-5">
+            {/* Header */}
             <div className="flex justify-between items-center">
-              <span className="text-cyan-400 font-semibold text-sm sm:text-base">
-                AI Performance Scan
-              </span>
-              <span className="text-green-400 animate-pulse text-sm sm:text-base">
-                +4.2%
-              </span>
+              <div>
+                <div className="text-white font-display font-semibold text-sm sm:text-base">
+                  AI Health Scan
+                </div>
+                <div className="text-gray-500 text-[11px] sm:text-xs">
+                  Updated 2 min ago
+                </div>
+              </div>
+              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#c2703a]/10 border border-[#c2703a]/20">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#c2703a] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#c2703a]" />
+                </span>
+                <span className="text-[#e3a873] text-[10px] sm:text-xs font-medium">
+                  Live
+                </span>
+              </div>
             </div>
 
-            <div className="space-y-2">
-              <div className="text-xs sm:text-sm text-gray-400">
-                Workout Sync
+            {/* Rings row */}
+            <div className="flex items-center justify-between px-1">
+              <RingMetric value={82} label="Recovery" gradientId="ringRecovery" colorFrom="#e3a873" colorTo="#c2703a" />
+              <RingMetric value={68} label="Sleep" gradientId="ringSleep" colorFrom="#c2703a" colorTo="#8b4a26" />
+              <RingMetric value={91} label="Adherence" gradientId="ringAdherence" colorFrom="#eab892" colorTo="#e3a873" />
+            </div>
+
+            {/* Daily progress bar */}
+            <div className="space-y-1.5">
+              <div className="flex justify-between text-[11px] sm:text-xs text-gray-400">
+                <span>Daily Progress</span>
+                <span className="text-[#e3a873] font-medium">78%</span>
               </div>
-              <div className="h-2 sm:h-3 bg-white/10 rounded-full overflow-hidden">
-                <div className="h-full w-4/5 bg-linear-to-r from-purple-500 via-cyan-500 to-pink-500 rounded-full" />
+              <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: "78%" }}
+                  transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
+                  className="h-full rounded-full"
+                  style={{ background: 'linear-gradient(90deg, var(--mid), #d68a52, var(--dark))' }}
+                />
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 sm:gap-6 pt-2 sm:pt-4">
-              <GlowStat title="Adherence" value="92%" />
-              <GlowStat title="Recovery" value="Optimal" />
-              <GlowStat title="Energy" value="High" />
-              <GlowStat title="Goal Status" value="On Track" />
+            {/* Metric grid */}
+            <div className="grid grid-cols-2 gap-3">
+              <MetricTile icon={HeartPulse} label="Heart Rate" value="68" unit="bpm" tint="text-rose-300" />
+              <MetricTile icon={Flame} label="Calories" value="1,842" unit="kcal" tint="text-orange-300" />
+              <MetricTile icon={Activity} label="BMI" value="22.4" unit="normal" tint="text-[#f0c9a0]" />
+              <MetricTile icon={Droplet} label="Water" value="2.1" unit="L / 3L" tint="text-[#cbb8a3]" />
+            </div>
+
+            {/* AI recommendation */}
+            <div className="relative rounded-2xl p-px" style={{ background: 'linear-gradient(90deg, rgba(194,112,58,0.25), rgba(214,138,82,0.25), rgba(139,74,38,0.25))' }}>
+              <div className="rounded-2xl bg-[#030712]/90 backdrop-blur-xl p-3.5 flex gap-3 items-start">
+                <div className="shrink-0 w-7 h-7 rounded-lg bg-[#c2703a]/10 border border-[#c2703a]/20 flex items-center justify-center">
+                  <Sparkles className="w-3.5 h-3.5 text-[#e3a873]" />
+                </div>
+                <div>
+                  <div className="text-[11px] sm:text-xs font-semibold text-[#e3a873] mb-0.5">
+                    AI Recommendation
+                  </div>
+                  <p className="text-[11px] sm:text-xs text-gray-400 leading-relaxed">
+                    Recovery is trending low — swap tomorrow's leg day for
+                    active mobility work.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Scan Animation */}
-      <style>{`
-        @keyframes scan {
-          0% { transform: translateY(-100%); }
-          100% { transform: translateY(400%); }
-        }
-        .animate-scan {
-          animation: scan 4s linear infinite;
-        }
-      `}</style>
+      </motion.div>
     </section>
   );
 }
 
-function GlowStat({ title, value }) {
+function RingMetric({ value, label, gradientId, colorFrom, colorTo }) {
+  const size = 68;
+  const strokeWidth = 6;
+  const radius = (size - strokeWidth) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (value / 100) * circumference;
+
   return (
-    <div className="bg-white/5 border border-cyan-400/20 p-3 sm:p-4 rounded-2xl text-center backdrop-blur-xl shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-      <div className="text-base sm:text-xl font-bold text-purple-400">
-        {value}
+    <div className="flex flex-col items-center gap-1.5">
+      <svg width={size} height={size} className="-rotate-90">
+        <defs>
+          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor={colorFrom} />
+            <stop offset="100%" stopColor={colorTo} />
+          </linearGradient>
+        </defs>
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          stroke="rgba(255,255,255,0.08)"
+          strokeWidth={strokeWidth}
+          fill="none"
+        />
+        <motion.circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          stroke={`url(#${gradientId})`}
+          strokeWidth={strokeWidth}
+          fill="none"
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          initial={{ strokeDashoffset: circumference }}
+          animate={{ strokeDashoffset: offset }}
+          transition={{ duration: 1.4, ease: "easeOut", delay: 0.3 }}
+        />
+      </svg>
+      <div className="-mt-11 sm:-mt-12 text-xs sm:text-sm font-semibold text-white">
+        {value}%
       </div>
-      <div className="text-[10px] sm:text-xs text-gray-400">{title}</div>
+      <div className="mt-6 text-[10px] sm:text-[11px] text-gray-500">{label}</div>
     </div>
+  );
+}
+
+function MetricTile({ icon: Icon, label, value, unit, tint }) {
+  return (
+    <div className="bg-white/3 border border-white/10 rounded-xl p-3 hover:bg-white/6 hover:border-[#c2703a]/20 transition-colors duration-300">
+      <div className="flex items-center gap-1.5 mb-1.5">
+        <Icon className={`w-3.5 h-3.5 ${tint}`} />
+        <span className="text-[10px] sm:text-[11px] text-gray-500">{label}</span>
+      </div>
+      <div className="flex items-baseline gap-1">
+        <span className="text-sm sm:text-base font-semibold text-white">{value}</span>
+        <span className="text-[10px] text-gray-500">{unit}</span>
+      </div>
+    </div>
+  );
+}
+
+function PrimaryButton({ to, children }) {
+  return (
+    <Link
+      to={to}
+      className="group relative inline-flex items-center justify-center gap-2 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-semibold text-sm sm:text-base text-[#030712] overflow-hidden transition-transform duration-300 hover:scale-[1.03]"
+      style={{ background: 'linear-gradient(90deg, var(--mid), #d68a52, var(--dark))', boxShadow: '0 0 30px rgba(194,112,58,0.35)' }}
+    >
+      <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-linear-to-r from-transparent via-white/40 to-transparent skew-x-12" />
+      <span className="relative flex items-center gap-2">{children}</span>
+    </Link>
+  );
+}
+
+function SecondaryButton({ to, children }) {
+  return (
+    <Link
+      to={to}
+      className="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full border border-white/15 text-gray-200 hover:text-white hover:bg-white/5 hover:border-[#c2703a]/30 transition-all duration-300 text-sm sm:text-base backdrop-blur-xl"
+    >
+      {children}
+    </Link>
   );
 }
 
@@ -157,30 +426,49 @@ function GlowStat({ title, value }) {
 
 function HowItWorks() {
   const steps = [
-    "Profile Setup",
-    "Generate Plan",
-    "Track Progress",
-    "Analyze",
-    "Adjust",
-    "AI Coach",
+    { icon: UserPlus, title: "Profile Setup", desc: "Share your goals, history, and baseline metrics." },
+    { icon: Sparkles, title: "Generate Plan", desc: "AI builds a training and nutrition plan around you." },
+    { icon: Activity, title: "Track Progress", desc: "Log workouts, meals, and recovery automatically." },
+    { icon: BarChart3, title: "Analyze", desc: "We surface trends across weeks, not just workouts." },
+    { icon: SlidersHorizontal, title: "Adjust", desc: "Your plan adapts as your data changes." },
+    { icon: Bot, title: "AI Coach", desc: "Get nudges and answers whenever you need them." },
   ];
 
   return (
-    <section className="py-20 sm:py-28 px-6 text-center">
-      <h2 className="text-3xl sm:text-4xl font-bold mb-16 sm:mb-20 bg-linear-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-        How FitAI Works
-      </h2>
+    <section className="py-24 sm:py-32 px-6">
+      <SectionHeading eyebrow="The Loop" title="How Fitvia works" />
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 max-w-7xl mx-auto">
-        {steps.map((step, i) => (
-          <div
-            key={i}
-            className="bg-white/5 backdrop-blur-xl border border-cyan-400/20 p-6 sm:p-8 rounded-3xl transition-all duration-300"
-          >
-            {/* <div className="text-cyan-400 font-bold mb-3">{i + 1}</div> */}
-            <div className="text-gray-300 text-sm sm:text-base">{step}</div>
-          </div>
-        ))}
+      <div className="relative max-w-7xl mx-auto mt-16 sm:mt-20">
+        {/* connecting line, desktop only */}
+        <div className="hidden lg:block absolute top-8 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(194,112,58,0.25), transparent)' }} />
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8">
+          {steps.map((step, i) => (
+            <motion.div
+              key={step.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
+              className="relative flex flex-col items-center text-center group"
+            >
+              <div className="relative z-10 w-16 h-16 rounded-2xl bg-white/4 border border-white/10 flex items-center justify-center mb-5 backdrop-blur-xl group-hover:border-[#c2703a]/40 group-hover:bg-[#c2703a]/5 transition-all duration-300 group-hover:-translate-y-1 shadow-[0_0_0_rgba(0,0,0,0)] group-hover:shadow-[0_0_25px_rgba(216,138,82,0.25)]">
+                <step.icon className="w-6 h-6 text-[#eab892]" />
+                <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#030712] border border-[#c2703a]/30 text-[#e3a873] text-[10px] font-semibold flex items-center justify-center">
+                  {i + 1}
+                </span>
+              </div>
+              <div className="bg-white/3 border border-white/10 rounded-2xl p-4 sm:p-5 w-full group-hover:border-white/20 transition-colors duration-300">
+                <div className="text-gray-100 font-medium text-sm sm:text-base mb-1.5 font-display">
+                  {step.title}
+                </div>
+                <p className="text-gray-500 text-[11px] sm:text-xs leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -190,46 +478,105 @@ function HowItWorks() {
 
 function Features() {
   const features = [
-    ["Adaptive Workouts", "Plans auto-adjust using fatigue & adherence data."],
-    ["Smart Diet Generator", "Macro-based personalized nutrition engine."],
-    ["Habit Intelligence", "Consistency scoring & drop-off detection."],
-    ["Progress Analytics", "Weight trends & measurement tracking."],
-    ["Energy Monitoring", "Prevent overtraining with smart recovery."],
-    ["Goal Forecast", "Predict timeline to reach your target."],
+    { icon: Dumbbell, title: "Adaptive Workouts", desc: "Plans auto-adjust using fatigue & adherence data.", accent: "from-[#c2703a]/20 to-[#d68a52]/20" },
+    { icon: Utensils, title: "Smart Diet Generator", desc: "Macro-based personalized nutrition engine.", accent: "from-[#d68a52]/20 to-[#8b4a26]/20" },
+    { icon: Brain, title: "Habit Intelligence", desc: "Consistency scoring & drop-off detection.", accent: "from-[#8b4a26]/20 to-[#94a3b8]/20" },
+    { icon: LineChart, title: "Progress Analytics", desc: "Weight trends & measurement tracking.", accent: "from-[#94a3b8]/20 to-[#c2703a]/20" },
+    { icon: BatteryCharging, title: "Energy Monitoring", desc: "Prevent overtraining with smart recovery.", accent: "from-[#c2703a]/20 to-[#8b4a26]/20" },
+    { icon: Target, title: "Goal Forecast", desc: "Predict timeline to reach your target.", accent: "from-[#d68a52]/20 to-[#94a3b8]/20" },
   ];
 
   return (
-    <section className="py-20 sm:py-28 px-6">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 sm:mb-20 bg-linear-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-        Core Features
-      </h2>
+    <section className="py-24 sm:py-32 px-6">
+      <SectionHeading eyebrow="Capabilities" title="Built for real progress" />
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 max-w-7xl mx-auto">
-        {features.map(([title, desc], i) => (
-          <div
-            key={i}
-            className="bg-white/5 backdrop-blur-2xl border border-cyan-400/20 p-8 sm:p-10 rounded-3xl transition-all duration-300"
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto mt-16 sm:mt-20">
+        {features.map((f, i) => (
+          <motion.div
+            key={f.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, delay: (i % 3) * 0.08, ease: "easeOut" }}
+            className="group relative rounded-3xl p-px bg-linear-to-br from-white/10 to-white/0 hover:from-[#c2703a]/40 hover:to-[#8b4a26]/20 transition-all duration-300"
           >
-            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-purple-400">
-              {title}
-            </h3>
-            <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
-              {desc}
-            </p>
-          </div>
+            <div className="relative h-full bg-white/3 backdrop-blur-2xl rounded-3xl p-8 sm:p-9 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:bg-white/5 overflow-hidden">
+              <div className={`absolute -top-10 -right-10 w-32 h-32 rounded-full bg-linear-to-br ${f.accent} blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+              <div className="relative w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-[#c2703a]/30 transition-colors duration-300">
+                <f.icon className="w-6 h-6 text-[#e3a873]" />
+              </div>
+
+              <h3 className="relative text-lg sm:text-xl font-semibold mb-3 text-white font-display">
+                {f.title}
+              </h3>
+              <p className="relative text-gray-400 leading-relaxed text-sm sm:text-base">
+                {f.desc}
+              </p>
+            </div>
+          </motion.div>
         ))}
       </div>
     </section>
   );
 }
 
+/* ================= SHARED ================= */
+
+function SectionHeading({ eyebrow, title }) {
+  return (
+    <div className="text-center max-w-2xl mx-auto">
+      <div className="text-[#e3a873] text-xs sm:text-sm font-medium tracking-[0.2em] uppercase mb-4">
+        {eyebrow}
+      </div>
+      <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+        {title}
+      </h2>
+    </div>
+  );
+}
+
 /* ================= FOOTER ================= */
 
 function Footer() {
+  const socials = [
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Github, href: "#", label: "GitHub" },
+  ];
+
   return (
-    <footer className="bg-[#030712] border-t border-cyan-400/20 mt-20">
-      <div className="text-center py-1 sm:py-1 text-gray-500 text-sm sm:text-md tracking-wide">
-        © {new Date().getFullYear()} HealthUP • All Rights reserved.
+    <footer className="relative mt-12">
+      <div className="h-px w-full" style={{ background: 'linear-gradient(90deg, transparent, rgba(194,112,58,0.18), transparent)' }} />
+      <div className="max-w-7xl mx-auto px-6 py-10 sm:py-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="flex items-center gap-2.5">
+          <img
+            src="/assets/fitvia-logo.png"
+            alt="Fitvia"
+            className="w-8 h-8 object-contain"
+          />
+          <span className="font-display font-semibold text-sm sm:text-base" style={{ color: 'var(--primary)' }}>
+            Fitvia
+          </span>
+        </div>
+
+        <div className="flex items-center gap-4">
+          {socials.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              aria-label={s.label}
+              className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#e3a873] hover:border-[#c2703a]/30 hover:bg-[#c2703a]/5 transition-all duration-300"
+            >
+              <s.icon className="w-4 h-4" />
+            </a>
+          ))}
+        </div>
+
+        <div className="text-gray-500 text-xs sm:text-sm tracking-wide text-center">
+          © {new Date().getFullYear()} Fitvia • All Rights reserved.
+        </div>
       </div>
     </footer>
   );
