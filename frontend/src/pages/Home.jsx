@@ -444,7 +444,7 @@ function HowItWorks() {
               transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
               className="relative flex flex-col items-center text-center group"
             >
-              <div className="relative z-10 w-16 h-16 rounded-2xl bg-white/4 border border-white/10 flex items-center justify-center mb-5 backdrop-blur-xl group-hover:border-[#C67B52]/40 group-hover:bg-[#C67B52]/5 transition-all duration-300 group-hover:-translate-y-1 shadow-[0_0_0_rgba(0,0,0,0)] group-hover:shadow-[0_0_25px_rgba(198,123,82,0.25)]">
+              <div className="hidden relative z-10 w-16 h-16 rounded-2xl bg-white/4 border border-white/10 lg:flex items-center justify-center mb-5 backdrop-blur-xl group-hover:border-[#C67B52]/40 group-hover:bg-[#C67B52]/5 transition-all duration-300 group-hover:-translate-y-1 shadow-[0_0_0_rgba(0,0,0,0)] group-hover:shadow-[0_0_25px_rgba(198,123,82,0.25)]">
                 <step.icon className="w-6 h-6 text-[#E6B18A]" />
                 <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#0F1115] border border-[#C67B52]/30 text-[#F3D0B2] text-[10px] font-semibold flex items-center justify-center">
                   {i + 1}
