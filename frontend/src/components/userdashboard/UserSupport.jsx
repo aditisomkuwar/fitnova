@@ -141,12 +141,12 @@ export default function Support() {
     {
       question: "Why did my calories change?",
       answer:
-        "Your calorie target adjusts dynamically based on weight trends, adherence levels, metabolic adaptation, and goal progress. HealthUP AI recalibrates weekly to ensure safe, sustainable transformation.",
+        "Your calorie target adjusts dynamically based on weight trends, adherence levels, metabolic adaptation, and goal progress. FitNova AI recalibrates weekly to ensure safe, sustainable transformation.",
     },
     {
       question: "Why is my workout lighter this week?",
       answer:
-        "Recent fatigue logs, low completion rate, or recovery indicators triggered an adaptive deload phase. HealthUP AI prioritizes long-term progression over short-term intensity.",
+        "Recent fatigue logs, low completion rate, or recovery indicators triggered an adaptive deload phase. FitNova AI prioritizes long-term progression over short-term intensity.",
     },
     {
       question: "What is Habit Score?",
@@ -154,7 +154,7 @@ export default function Support() {
         "Habit Score measures weekly behavioral consistency using Workout Adherence (60%) and Diet Adherence (40%). It predicts discipline patterns and potential drop-off risk.",
     },
     {
-      question: "How does HealthUP AI prevent overtraining?",
+      question: "How does FitNova AI prevent overtraining?",
       answer:
         "The system monitors fatigue frequency, completion rate, and progressive overload patterns. If recovery signals are detected, volume is reduced or structured recovery sessions are scheduled automatically.",
     },
@@ -166,7 +166,7 @@ export default function Support() {
     {
       question: "Can I manually adjust my plan?",
       answer:
-        "Yes. You can request modifications. However, HealthUP AI recommendations are data-driven and optimized for long-term sustainability and metabolic safety.",
+        "Yes. You can request modifications. However, FitNova AI recommendations are data-driven and optimized for long-term sustainability and metabolic safety.",
     },
     {
       question: "Why is my protein intake higher than expected?",
@@ -179,14 +179,14 @@ export default function Support() {
         "If no data is logged, the system detects inactivity risk. It may simplify your plan, reduce intensity, or send habit continuity reminders.",
     },
     {
-      question: "How does HealthUP AI handle plateaus?",
+      question: "How does FitNova AI handle plateaus?",
       answer:
         "If weight or performance stagnates for multiple weeks, the system analyzes adherence, recovery, and calorie intake before adjusting macros, training load, or activity volume.",
     },
     {
       question: "Is my data secure?",
       answer:
-        "Yes. HealthUP AI uses encrypted authentication, secure token-based sessions, and protected database architecture to ensure user data privacy and integrity.",
+        "Yes. FitNova AI uses encrypted authentication, secure token-based sessions, and protected database architecture to ensure user data privacy and integrity.",
     },
   ];
   // const handleSend = () => {
@@ -244,7 +244,7 @@ export default function Support() {
 
       {/* AI Chat Section */}
       {/* <div className="bg-[#111827] border border-gray-700 rounded-2xl p-6 mb-10">
-        <h2 className="text-xl font-semibold mb-4">Ask FitAI Support</h2>
+        <h2 className="text-xl font-semibold mb-4">Ask FitNova AI Support</h2>
 
         <div className="h-64 overflow-y-auto bg-[#0F172A] p-4 rounded-xl mb-4">
           {messages.length === 0 && (

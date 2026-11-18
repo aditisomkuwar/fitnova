@@ -8,7 +8,7 @@ export default function HelpSection() {
     habit: {
       title: "Habit Score Help",
       text: `
-HealthUP AI Habit Score is a structured behavioral intelligence metric designed to measure long-term consistency rather than short-term motivation.
+FitNova AI Habit Score is a structured behavioral intelligence metric designed to measure long-term consistency rather than short-term motivation.
 
 Calculation Logic:
 Habit Score = (Workout Adherence × 60%) + (Diet Adherence × 40%)
@@ -39,7 +39,7 @@ The goal is sustainable identity-based habit formation — not temporary complia
     diet: {
       title: "Diet Plan Intelligence",
       text: `
-HealthUP AI generates nutrition plans using a scientifically grounded metabolic framework.
+FitNova AI generates nutrition plans using a scientifically grounded metabolic framework.
 
 Step 1 – Basal Metabolic Rate:
 Calculated using the Mifflin-St Jeor Equation.
@@ -63,14 +63,14 @@ Safety Protocols:
 • No extreme crash dieting
 • Weekly progress recalibration
 
-HealthUP AI prioritizes metabolic health, performance sustainability, and long-term adherence.
+FitNova AI prioritizes metabolic health, performance sustainability, and long-term adherence.
 `,
     },
 
     workout: {
       title: "Adaptive Workout Intelligence",
       text: `
-HealthUP AI operates on a Progressive Overload + Recovery Balance Model.
+FitNova AI operates on a Progressive Overload + Recovery Balance Model.
 
 Initial Programming Based On:
 • Goal type
@@ -105,7 +105,7 @@ This prevents overtraining, burnout, and plateau formation.
     support: {
       title: "Technical & System Support",
       text: `
-HealthUP AI is built using a secure full-stack architecture.
+FitNova AI is built using a secure full-stack architecture.
 
 Security Layer:
 • Password hashing (bcrypt / Argon2)
@@ -134,7 +134,7 @@ Our system logs:
 • Module error
 • Stack trace (if applicable)
 
-HealthUP AI is designed for reliability, transparency, and user safety.
+FitNova AI is designed for reliability, transparency, and user safety.
 `,
     },
   };

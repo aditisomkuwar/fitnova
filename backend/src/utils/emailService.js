@@ -69,7 +69,7 @@ export const sendOTPEmail = async (to, otp) => {
             <tr>
               <td style="padding:20px; text-align:center; background:#f9fafb; border-top:1px solid #e5e7eb;">
                 <p style="font-size:12px; color:#9ca3af; margin:0;">
-                  © ${new Date().getFullYear()} HealthUP ! Stay Fit India. All rights reserved.
+                  © ${new Date().getFullYear()} FitNova ! Stay Fit India. All rights reserved.
                 </p>
               </td>
             </tr>

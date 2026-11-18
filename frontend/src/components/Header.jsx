@@ -51,8 +51,8 @@ const Header = () => {
         <div
           className={`h-20 flex items-center justify-between px-5 md:px-10 lg:px-16 backdrop-blur-2xl border-b transition-all duration-300 ${
             darkMode
-              ? "bg-[#0F1115]/90 border-[#C67B52]/20 shadow-[0_8px_35px_rgba(0,0,0,.35)]"
-              : "bg-white/90 border-[#E6B18A] shadow-lg"
+              ? "bg-[#0F172A]/90 border-[#7C3AED]/20 shadow-[0_8px_35px_rgba(0,0,0,.35)]"
+              : "bg-white/90 border-[#A78BFA] shadow-lg"
           }`}
         >
           {/* LOGO */}
@@ -63,20 +63,20 @@ const Header = () => {
           >
             <img
               src={logo}
-              alt="Fitvia"
+              alt="FitNova"
               className="w-15 h-15 object-contain transition-all mt-3 duration-300 group-hover:scale-110"
             />
 
             <div className="leading-none">
 
-              <h1 className="text-3xl font-black tracking-tight bg-linear-to-r from-[#F3D0B2] via-[#C67B52] to-[#8C4A2F] bg-clip-text text-transparent">
-                Fitvia
+              <h1 className="text-3xl font-black tracking-tight bg-linear-to-r from-[#C4B5FD] via-[#7C3AED] to-[#5B21B6] bg-clip-text text-transparent">
+                FitNova
               </h1>
 
               <p
                 className={`text-[10px] uppercase tracking-[0.35em] ${
                   darkMode
-                    ? "text-[#D79A6A]/80"
+                    ? "text-[#A78BFA]/80"
                     : "text-gray-500"
                 }`}
               >
@@ -99,8 +99,8 @@ const Header = () => {
                 to={item.to}
                 className={`px-6 py-2 rounded-full transition-all duration-300 font-medium ${
                   darkMode
-                    ? "text-gray-300 hover:text-[#F3D0B2] hover:bg-[#C67B52]/10"
-                    : "text-gray-700 hover:text-[#9C5A3C] hover:bg-[#F8E9DF]"
+                    ? "text-gray-300 hover:text-[#C4B5FD] hover:bg-[#7C3AED]/10"
+                    : "text-gray-700 hover:text-[#6D28D9] hover:bg-[#EDE9FE]"
                 }`}
               >
                 {item.title}
@@ -118,14 +118,14 @@ const Header = () => {
               onClick={toggleTheme}
               className={`w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 ${
                 darkMode
-                  ? "bg-white/5 border border-[#C67B52]/30 hover:bg-[#C67B52]/10"
-                  : "bg-[#FFF5EE] border border-[#E6B18A] hover:bg-[#F8E9DF]"
+                  ? "bg-white/5 border border-[#7C3AED]/30 hover:bg-[#7C3AED]/10"
+                  : "bg-[#F5F3FF] border border-[#A78BFA] hover:bg-[#EDE9FE]"
               }`}
             >
               {darkMode ? (
                 <FiSun className="text-xl text-yellow-400" />
               ) : (
-                <FiMoon className="text-xl text-[#9C5A3C]" />
+                <FiMoon className="text-xl text-[#6D28D9]" />
               )}
             </button>
 
@@ -135,8 +135,8 @@ const Header = () => {
               onClick={() => navigate("/login")}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-xl border transition-all duration-300 ${
                 darkMode
-                  ? "border-[#C67B52]/50 text-white hover:bg-[#C67B52]/10 hover:border-[#D79A6A]"
-                  : "border-[#C67B52] text-[#9C5A3C] hover:bg-[#F8E9DF]"
+                  ? "border-[#7C3AED]/50 text-white hover:bg-[#7C3AED]/10 hover:border-[#A78BFA]"
+                  : "border-[#7C3AED] text-[#6D28D9] hover:bg-[#EDE9FE]"
               }`}
             >
               <FiLogIn className="text-lg" />
@@ -147,7 +147,7 @@ const Header = () => {
 
             <button
               onClick={() => navigate("/signup")}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white bg-linear-to-r from-[#E6B18A] via-[#C67B52] to-[#9C5A3C] hover:shadow-[0_0_25px_rgba(198,123,82,.45)] transition-all duration-300"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white bg-linear-to-r from-[#A78BFA] via-[#7C3AED] to-[#6D28D9] hover:shadow-[0_0_25px_rgba(198,123,82,.45)] transition-all duration-300"
             >
               <FiUserPlus className="text-lg" />
               Create Account
@@ -164,8 +164,8 @@ const Header = () => {
             <HiOutlineMenu
               className={`text-4xl ${
                 darkMode
-                  ? "text-[#D79A6A]"
-                  : "text-[#9C5A3C]"
+                  ? "text-[#A78BFA]"
+                  : "text-[#6D28D9]"
               }`}
             />
           </button>
@@ -185,8 +185,8 @@ const Header = () => {
       <aside
         className={`fixed right-0 top-0 h-screen w-[82vw] max-w-[320px] overflow-y-auto backdrop-blur-3xl border-l z-50 transition-transform duration-300 md:hidden ${
           darkMode
-            ? "bg-linear-to-b from-[#0F1115] via-[#181818] to-[#0F1115] border-[#C67B52]/20"
-            : "bg-white border-[#E6B18A]"
+            ? "bg-linear-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A] border-[#7C3AED]/20"
+            : "bg-white border-[#A78BFA]"
         } ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         {/* Drawer Header */}
@@ -194,8 +194,8 @@ const Header = () => {
         <div
           className={`flex items-center justify-between px-5 h-20 border-b ${
             darkMode
-              ? "border-[#C67B52]/20"
-              : "border-[#E6B18A]"
+              ? "border-[#7C3AED]/20"
+              : "border-[#A78BFA]"
           }`}
         >
           <Link
@@ -205,19 +205,19 @@ const Header = () => {
           >
             <img
               src={logo}
-              alt="Fitvia"
+              alt="FitNova"
               className="w-10 h-10 object-contain"
             />
 
             <div className="leading-none">
-              <h1 className="text-2xl font-black bg-linear-to-r from-[#F3D0B2] via-[#C67B52] to-[#8C4A2F] bg-clip-text text-transparent">
-                Fitvia
+              <h1 className="text-2xl font-black bg-linear-to-r from-[#C4B5FD] via-[#7C3AED] to-[#5B21B6] bg-clip-text text-transparent">
+                FitNova
               </h1>
 
               <p
                 className={`text-[10px] uppercase tracking-[0.3em] ${
                   darkMode
-                    ? "text-[#D79A6A]/70"
+                    ? "text-[#A78BFA]/70"
                     : "text-gray-500"
                 }`}
               >
@@ -233,8 +233,8 @@ const Header = () => {
             <HiOutlineX
               className={`text-4xl ${
                 darkMode
-                  ? "text-[#C67B52]"
-                  : "text-[#9C5A3C]"
+                  ? "text-[#7C3AED]"
+                  : "text-[#6D28D9]"
               }`}
             />
           </button>
@@ -267,8 +267,8 @@ const Header = () => {
                 onClick={() => setMenuOpen(false)}
                 className={`flex items-center gap-4 rounded-xl px-4 py-3 transition-all duration-300 ${
                   darkMode
-                    ? "text-gray-300 hover:bg-[#C67B52]/10 hover:text-[#F3D0B2]"
-                    : "text-gray-700 hover:bg-[#F8E9DF] hover:text-[#9C5A3C]"
+                    ? "text-gray-300 hover:bg-[#7C3AED]/10 hover:text-[#C4B5FD]"
+                    : "text-gray-700 hover:bg-[#EDE9FE] hover:text-[#6D28D9]"
                 }`}
               >
                 <span className="text-xl">{item.icon}</span>
@@ -281,16 +281,16 @@ const Header = () => {
           <div
             className={`mt-6 pt-6 border-t ${
               darkMode
-                ? "border-[#C67B52]/20"
-                : "border-[#E6B18A]"
+                ? "border-[#7C3AED]/20"
+                : "border-[#A78BFA]"
             }`}
           >
             <button
               onClick={toggleTheme}
               className={`w-full flex items-center justify-center gap-3 py-3 rounded-xl transition-all duration-300 ${
                 darkMode
-                  ? "bg-white/5 border border-[#C67B52]/30 text-white hover:bg-[#C67B52]/10"
-                  : "bg-[#FFF5EE] border border-[#E6B18A] text-[#9C5A3C] hover:bg-[#F8E9DF]"
+                  ? "bg-white/5 border border-[#7C3AED]/30 text-white hover:bg-[#7C3AED]/10"
+                  : "bg-[#F5F3FF] border border-[#A78BFA] text-[#6D28D9] hover:bg-[#EDE9FE]"
               }`}
             >
               {darkMode ? (
@@ -300,7 +300,7 @@ const Header = () => {
                 </>
               ) : (
                 <>
-                  <FiMoon className="text-xl text-[#9C5A3C]" />
+                  <FiMoon className="text-xl text-[#6D28D9]" />
                   <span>Dark Mode</span>
                 </>
               )}
@@ -312,8 +312,8 @@ const Header = () => {
           <div
             className={`mt-6 pt-6 space-y-3 border-t ${
               darkMode
-                ? "border-[#C67B52]/20"
-                : "border-[#E6B18A]"
+                ? "border-[#7C3AED]/20"
+                : "border-[#A78BFA]"
             }`}
           >
             {/* Login */}
@@ -325,8 +325,8 @@ const Header = () => {
               }}
               className={`w-full flex items-center justify-center gap-3 py-3 rounded-xl border transition-all duration-300 ${
                 darkMode
-                  ? "border-[#C67B52]/50 text-white hover:bg-[#C67B52]/10 hover:border-[#D79A6A]"
-                  : "border-[#C67B52] text-[#9C5A3C] hover:bg-[#F8E9DF]"
+                  ? "border-[#7C3AED]/50 text-white hover:bg-[#7C3AED]/10 hover:border-[#A78BFA]"
+                  : "border-[#7C3AED] text-[#6D28D9] hover:bg-[#EDE9FE]"
               }`}
             >
               <FiLogIn className="text-lg" />
@@ -340,7 +340,7 @@ const Header = () => {
                 navigate("/signup");
                 setMenuOpen(false);
               }}
-              className="w-full flex items-center justify-center gap-3 py-3 rounded-xl text-white bg-linear-to-r from-[#E6B18A] via-[#C67B52] to-[#9C5A3C] hover:shadow-[0_0_25px_rgba(198,123,82,.45)] transition-all duration-300"
+              className="w-full flex items-center justify-center gap-3 py-3 rounded-xl text-white bg-linear-to-r from-[#A78BFA] via-[#7C3AED] to-[#6D28D9] hover:shadow-[0_0_25px_rgba(198,123,82,.45)] transition-all duration-300"
             >
               <FiUserPlus className="text-lg" />
               Create Account
@@ -353,18 +353,18 @@ const Header = () => {
         <div
           className={`border-t p-5 ${
             darkMode
-              ? "border-[#C67B52]/20"
-              : "border-[#E6B18A]"
+              ? "border-[#7C3AED]/20"
+              : "border-[#A78BFA]"
           }`}
         >
           <p
             className={`text-center text-xs ${
               darkMode
-                ? "text-[#D79A6A]/70"
+                ? "text-[#A78BFA]/70"
                 : "text-gray-500"
             }`}
           >
-            © {new Date().getFullYear()} Fitvia. All Rights Reserved.
+            © {new Date().getFullYear()} FitNova. All Rights Reserved.
           </p>
         </div>
       </aside>

@@ -45,7 +45,7 @@ const AiChatWidget = ({ chatOpen, setChatOpen }) => {
       const welcome = [
         {
           role: "ai",
-          text: "👋 Hi, I'm FitAI. Ask me anything about workouts, diet, nutrition, weight loss, muscle gain, or your health goals!",
+          text: "👋 Hi, I'm FitNova AI. Ask me anything about workouts, diet, nutrition, weight loss, muscle gain, or your health goals!",
         },
       ];
 
@@ -114,7 +114,7 @@ const AiChatWidget = ({ chatOpen, setChatOpen }) => {
         <div className="h-16 px-6 md:px-24 border-b border-white/10 bg-[#020617]/90 backdrop-blur-xl flex items-center justify-between ">
           <div>
             <h2 className="text-lg md:text-xl font-bold bg-linear-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              FitAI Assistant
+              FitNova AI Assistant
             </h2>
             <p className="text-xs text-gray-400">
               Your personal AI health coach
@@ -135,12 +135,12 @@ const AiChatWidget = ({ chatOpen, setChatOpen }) => {
             <div className="h-full flex flex-col items-center justify-center text-center">
               <img
                 src={logo}
-                alt="FitAI"
+                alt="FitNova AI"
                 className="w-24 h-24 md:w-32 md:h-32 object-contain mb-6"
               />
 
               <h2 className="text-2xl md:text-4xl font-bold bg-linear-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Welcome to FitAI
+                Welcome to FitNova AI
               </h2>
 
               <p className="mt-3 max-w-md text-gray-400 text-xs md:text-base">
@@ -165,7 +165,7 @@ const AiChatWidget = ({ chatOpen, setChatOpen }) => {
 
               {typing && (
                 <div className="bg-white/5 border border-white/10 rounded-2xl px-4 py-2 w-fit">
-                  <p className="text-sm text-gray-400">FitAI is typing...</p>
+                  <p className="text-sm text-gray-400">FitNova AI is typing...</p>
                 </div>
               )}
             </div>
@@ -177,7 +177,7 @@ const AiChatWidget = ({ chatOpen, setChatOpen }) => {
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
             <img
               src={logo}
-              alt="FitAI"
+              alt="FitNova AI"
               className="w-40 md:w-56 lg:w-64 opacity-[0.04] object-contain"
             />
           </div>
@@ -189,7 +189,7 @@ const AiChatWidget = ({ chatOpen, setChatOpen }) => {
 
         <div className="absolute bottom-18 left-1/2 -translate-x-1/2 z-0 pointer-events-none select-none">
           <p className="text-xs md:text-sm text-red-300 whitespace-nowrap  opacity-50">
-            <span className="font-semibold">Medical Disclaimer:</span> FitAI can
+            <span className="font-semibold">Medical Disclaimer:</span> FitNova AI can
             make mistakes.
           </p>
         </div>

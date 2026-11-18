@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 
 /**
- * About — premium, futuristic AI-healthcare page for HealthUP.
+ * About — premium, futuristic AI-healthcare page for FitNova.
  * Palette: dark neutrals (#030712 / #0F172A / #111827) + emerald / teal / cyan accents.
  * All original content, routes, and handlers are preserved; only the UI/UX layer changed.
  */
@@ -44,10 +44,10 @@ const About = () => {
           #030712
         `,
         fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif",
-        '--primary': '#eab892',
-        '--mid': '#c2703a',
-        '--dark': '#8b4a26',
-        '--accent': '#a85a2b'
+        '--primary': '#C4B5FD',
+        '--mid': '#7C3AED',
+        '--dark': '#5B21B6',
+        '--accent': '#6D28D9'
       }}
     >
       <style>{`
@@ -95,12 +95,12 @@ const About = () => {
               </span>
               <br />
               <span style={{ background: 'linear-gradient(90deg, var(--primary), var(--mid), var(--dark))', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>
-                Fitvia
+                FitNova
               </span>
             </h1>
 
             <p className="max-w-xl text-lg leading-8 text-gray-400">
-              HealthUP combines AI-powered health guidance, intelligent
+              FitNova combines AI-powered health guidance, intelligent
               nutrition, adaptive workout planning and smart progress tracking
               into one premium platform designed for long-term wellness—not
               short-term motivation.
@@ -143,7 +143,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why HealthUP */}
+      {/* Why FitNova */}
       <section className="relative z-10 px-6 py-20 md:px-10">
         <div className="mx-auto max-w-7xl">
           <motion.div
@@ -163,7 +163,7 @@ const About = () => {
             <div>
               
               <span className="inline-block rounded-full px-4 py-2 text-xs uppercase tracking-[0.25em]" style={{ border: '1px solid rgba(194,112,58,0.28)', background: 'rgba(234,184,146,0.06)', color: 'var(--primary)' }}>
-                Why Fitvia
+                Why FitNova
               </span>
 
               <h2 className="mt-6 text-4xl md:text-5xl font-bold font-display leading-tight">
@@ -176,7 +176,7 @@ const About = () => {
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-400">
                 Most fitness apps fail because they expect users to be perfect.
-                HealthUP adapts to your lifestyle using AI. Whether you miss
+                FitNova adapts to your lifestyle using AI. Whether you miss
                 workouts, sleep less, or change your goals, your plan evolves
                 with you instead of forcing you to restart.
               </p>
@@ -185,7 +185,7 @@ const About = () => {
                 {[
                   { title: "You miss a workout", body: "The plan quietly rebalances your week — no guilt, no restart." },
                   { title: "You sleep less", body: "Recovery-aware AI lowers intensity until your body is ready again." },
-                  { title: "Your goals change", body: "Tell HealthUP once, and every future recommendation follows." },
+                  { title: "Your goals change", body: "Tell FitNova once, and every future recommendation follows." },
                 ].map((step, i) => (
                   <motion.li
                     key={step.title}
@@ -220,7 +220,7 @@ const About = () => {
             </p>
             <h2 className="mt-4 text-4xl md:text-5xl font-bold font-display">
               <span style={{ background: 'linear-gradient(90deg, #FFFFFF, var(--primary), var(--mid))', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>
-                What Makes Fitvia Different
+                What Makes FitNova Different
               </span>
             </h2>
           </div>
@@ -262,7 +262,7 @@ const About = () => {
             </h2>
 
             <p className="mt-6 leading-8 text-gray-400">
-              HealthUP is designed to become your intelligent health partner.
+              FitNova is designed to become your intelligent health partner.
               Instead of showing random numbers, it analyzes your habits,
               nutrition, workouts and recovery to guide better daily decisions.
             </p>
@@ -482,7 +482,7 @@ function HealthDashboardCard() {
             Smarter health decisions through Artificial Intelligence.
           </h2>
           <p className="mt-3 text-sm leading-7 text-gray-400">
-            Instead of generic plans, HealthUP learns from your progress and
+            Instead of generic plans, FitNova learns from your progress and
             continuously improves your journey.
           </p>
         </div>
@@ -803,7 +803,7 @@ function ValueCard({ no, icon: Icon, title, body, delay }) {
         <span className="text-sm font-semibold" style={{ color: 'rgba(234,184,146,0.5)' }}>{no}</span>
       </div>
 
-      <h3 className="mt-8 text-2xl font-bold font-display text-white transition-colors group-hover:text-[#eab892]">
+      <h3 className="mt-8 text-2xl font-bold font-display text-white transition-colors group-hover:text-[#C4B5FD]">
         {title}
       </h3>
       <p className="mt-5 leading-8 text-gray-400">{body}</p>
@@ -818,7 +818,7 @@ function RippleButton({ onClick, children }) {
     <button
       onClick={onClick}
       className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-2 overflow-hidden rounded-full px-10 py-4 text-lg font-semibold text-[#030712] transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02]"
-      style={{ background: 'linear-gradient(90deg, var(--mid), #d68a52, var(--dark))', boxShadow: '0 15px 35px rgba(168,90,43,0.28)' }}
+      style={{ background: 'linear-gradient(90deg, var(--mid), #8B5CF6, var(--dark))', boxShadow: '0 15px 35px rgba(168,90,43,0.28)' }}
     >
       <span className="pointer-events-none absolute inset-0 -translate-x-full skew-x-12 bg-linear-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
       <span className="relative flex items-center gap-2">{children}</span>

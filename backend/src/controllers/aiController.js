@@ -40,11 +40,7 @@
 //   });
 // };
 
-import OpenAI from "openai";
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+   import groq from "../config/groq.js";
 
 export const generateDietPlan = async (req, res, next) => {
   try {
@@ -63,8 +59,8 @@ Diet type: ${diet}
 Include breakfast, lunch, dinner and snacks.
 `;
 
-    const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+    const response = await groq.chat.completions.create({
+      model: "llama-3.1-8b-instant",
       messages: [{ role: "user", content: prompt }],
     });
 
@@ -91,8 +87,8 @@ Fitness level: ${level}
 Include exercises, sets and reps.
 `;
 
-    const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+    const response = await groq.chat.completions.create({
+      model: "llama-3.1-8b-instant",
       messages: [{ role: "user", content: prompt }],
     });
 

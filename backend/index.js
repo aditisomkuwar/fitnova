@@ -21,7 +21,8 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
+        "http://localhost:5173",
+   process.env.FRONTEND_URL,
     ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
@@ -39,7 +40,7 @@ app.use("/api/v1/progress", progressRoutes);
 app.use("/api/ai", aiRouter);
 
 app.get("/", (req, res) => {
-  console.log("server is working");
+   res.send("FitNova API is running");
 });
 
 app.use((err, req, res, next) => {

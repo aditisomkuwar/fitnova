@@ -97,7 +97,7 @@ const UserSidebar = ({
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-lg font-bold tracking-wider uppercase bg-linear-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                    HealthUP
+                    FitNova
                   </p>
                   <p className="text-[10px] uppercase tracking-[0.3em] text-gray-500">
                     FITNESS AI

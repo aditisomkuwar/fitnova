@@ -21,9 +21,9 @@ import {
 import api from "../config/Api";
 
 /**
- * Contact — premium AI-healthcare contact page for Fitvia.
- * Palette matches the rest of the site: #C67B52 / #E6B18A / #F3D0B2 / #8C4A2F
- * on dark neutrals (#0F1115 / #141414 / #181818 / #0B0B0B).
+ * Contact — premium AI-healthcare contact page for FitNova.
+ * Palette matches the rest of the site: #7C3AED / #A78BFA / #C4B5FD / #5B21B6
+ * on dark neutrals (#0F172A / #1E293B / #1E293B / #0B0B0B).
  * All original state, handlers, API call, and toast behavior are unchanged —
  * only the UI/UX layer has been redesigned.
  */
@@ -73,7 +73,7 @@ const Contact = () => {
           background: `
             radial-gradient(circle at top, rgba(198,123,82,.16), transparent 35%),
             radial-gradient(circle at bottom right, rgba(140,74,47,.14), transparent 40%),
-            #0F1115
+            #0F172A
           `,
           fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif",
         }}
@@ -108,19 +108,19 @@ const Contact = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-16 text-center"
           >
-            <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#C67B52]/30 bg-[#C67B52]/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-[#F3D0B2] backdrop-blur-xl sm:text-sm">
+            <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#7C3AED]/30 bg-[#7C3AED]/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-[#C4B5FD] backdrop-blur-xl sm:text-sm">
               <MessageCircle className="h-3.5 w-3.5" aria-hidden="true" />
               We're Here to Help
             </span>
 
             <h1 className="mb-4 text-4xl font-extrabold font-display sm:text-5xl md:text-6xl">
-              <span className="bg-linear-to-r from-[#F3D0B2] via-[#C67B52] to-[#8C4A2F] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#C4B5FD] via-[#7C3AED] to-[#5B21B6] bg-clip-text text-transparent">
                 Let's Improve Health Together
               </span>
             </h1>
 
             <p className="mx-auto max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg">
-              Questions, feedback, or collaboration ideas — Fitvia is always
+              Questions, feedback, or collaboration ideas — FitNova is always
               open to meaningful conversations that help build better health
               experiences for everyone.
             </p>
@@ -145,8 +145,8 @@ const Contact = () => {
               {/* Contact info card */}
               <GlassPanel>
                 <div className="mb-6 flex flex-wrap items-center justify-between gap-2">
-                  <h2 className="text-xl font-semibold font-display text-[#F3D0B2]">
-                    Connect With Fitvia
+                  <h2 className="text-xl font-semibold font-display text-[#C4B5FD]">
+                    Connect With FitNova
                   </h2>
                   <LiveStatusBadge />
                 </div>
@@ -156,7 +156,7 @@ const Contact = () => {
                   issue, or just curious about what we offer, our team is
                   always ready to assist. We strive to provide prompt,
                   friendly, and meaningful responses so you always feel
-                  supported throughout your journey with Fitvia.
+                  supported throughout your journey with FitNova.
                 </p>
 
                 <div className="space-y-4">
@@ -175,7 +175,7 @@ const Contact = () => {
                       key={i}
                       href="#"
                       aria-label="Social media link"
-                      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-gray-400 transition-all duration-300 hover:border-[#C67B52]/40 hover:bg-[#C67B52]/10 hover:text-[#F3D0B2]"
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-gray-400 transition-all duration-300 hover:border-[#7C3AED]/40 hover:bg-[#7C3AED]/10 hover:text-[#C4B5FD]"
                     >
                       <Icon className="h-4 w-4" aria-hidden="true" />
                     </a>
@@ -185,7 +185,7 @@ const Contact = () => {
 
               {/* Map preview */}
               <GlassPanel className="p-0! overflow-hidden">
-                <div className="relative h-40 w-full bg-[#141414]">
+                <div className="relative h-40 w-full bg-[#1E293B]">
                   <div
                     className="absolute inset-0 opacity-40"
                     style={{
@@ -196,8 +196,8 @@ const Contact = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="relative flex h-4 w-4">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#C67B52] opacity-60" />
-                      <span className="relative inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#C67B52] text-[#0F1115]">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#7C3AED] opacity-60" />
+                      <span className="relative inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#7C3AED] text-[#0F172A]">
                         <MapPin className="h-2.5 w-2.5" aria-hidden="true" />
                       </span>
                     </span>
@@ -210,13 +210,13 @@ const Contact = () => {
 
               {/* AI Assistant card */}
               <GlassPanel className="relative overflow-hidden">
-                <div className="pointer-events-none absolute -top-8 -right-8 h-28 w-28 rounded-full bg-[#C67B52]/20 blur-2xl" />
+                <div className="pointer-events-none absolute -top-8 -right-8 h-28 w-28 rounded-full bg-[#7C3AED]/20 blur-2xl" />
                 <div className="relative flex items-start gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#C67B52]/30 bg-[#C67B52]/10">
-                    <Sparkles className="h-5 w-5 text-[#F3D0B2]" aria-hidden="true" />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#7C3AED]/30 bg-[#7C3AED]/10">
+                    <Sparkles className="h-5 w-5 text-[#C4B5FD]" aria-hidden="true" />
                   </div>
                   <div className="min-w-0">
-                    <div className="mb-1 text-sm font-semibold text-[#F3D0B2]">
+                    <div className="mb-1 text-sm font-semibold text-[#C4B5FD]">
                       Need a faster answer?
                     </div>
                     <p className="text-sm leading-relaxed text-gray-400">
@@ -235,9 +235,9 @@ const Contact = () => {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
               className="min-w-0 lg:col-span-3"
             >
-              <div className="rounded-[28px] bg-linear-to-br from-[#C67B52]/30 via-[#E6B18A]/15 to-[#8C4A2F]/20 p-px shadow-[0_25px_60px_rgba(0,0,0,.35)]">
+              <div className="rounded-[28px] bg-linear-to-br from-[#7C3AED]/30 via-[#A78BFA]/15 to-[#5B21B6]/20 p-px shadow-[0_25px_60px_rgba(0,0,0,.35)]">
                 <div className="rounded-[27px] bg-[#111111]/90 p-6 backdrop-blur-3xl sm:p-8 lg:p-9">
-                  <h2 className="mb-1 text-xl font-semibold font-display text-[#F3D0B2]">
+                  <h2 className="mb-1 text-xl font-semibold font-display text-[#C4B5FD]">
                     Get in Touch
                   </h2>
                   <p className="mb-7 text-sm text-gray-500">
@@ -297,7 +297,7 @@ const Contact = () => {
             className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-3"
           >
             <TrustCard icon={ShieldCheck} title="Data Encrypted" body="Every message is transmitted securely end-to-end." />
-            <TrustCard icon={Users} title="40K+ Users Trust Us" body="A growing community relies on Fitvia daily." />
+            <TrustCard icon={Users} title="40K+ Users Trust Us" body="A growing community relies on FitNova daily." />
             <TrustCard icon={Clock} title="24h Avg. Response" body="Our team replies to nearly every message within a day." />
           </motion.div>
 
@@ -305,7 +305,7 @@ const Contact = () => {
           <section className="mt-24">
             <SectionHeading eyebrow="How It Works" title="Our Support Process" />
             <div className="relative mx-auto mt-14 max-w-5xl">
-              <div className="absolute left-0 right-0 top-6 hidden h-px bg-linear-to-r from-transparent via-[#C67B52]/40 to-transparent md:block" />
+              <div className="absolute left-0 right-0 top-6 hidden h-px bg-linear-to-r from-transparent via-[#7C3AED]/40 to-transparent md:block" />
               <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
                 {[
                   { step: "01", title: "Message Received", body: "Your note lands securely in our support queue." },
@@ -321,7 +321,7 @@ const Contact = () => {
                     transition={{ duration: 0.5, delay: i * 0.1 }}
                     className="flex flex-col items-center text-center"
                   >
-                    <div className="relative z-10 mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-[#C67B52]/40 bg-[#141414] text-sm font-semibold text-[#F3D0B2]">
+                    <div className="relative z-10 mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-[#7C3AED]/40 bg-[#1E293B] text-sm font-semibold text-[#C4B5FD]">
                       {s.step}
                     </div>
                     <div className="text-sm font-semibold text-white">{s.title}</div>
@@ -337,7 +337,7 @@ const Contact = () => {
             <SectionHeading eyebrow="Good to Know" title="Frequently Asked Questions" />
             <div className="mx-auto mt-14 grid max-w-5xl gap-6 sm:grid-cols-2">
               {[
-                { q: "How does the AI build my plan?", a: "Fitvia analyzes your goals, activity, and recovery data to generate and continuously adjust a personalized plan." },
+                { q: "How does the AI build my plan?", a: "FitNova analyzes your goals, activity, and recovery data to generate and continuously adjust a personalized plan." },
                 { q: "Is my health data secure?", a: "Yes — all data is encrypted in transit and at rest, and never sold to third parties." },
                 { q: "Can I cancel anytime?", a: "Absolutely. You can cancel your subscription anytime from your account settings, no questions asked." },
                 { q: "Do you offer a free trial?", a: "Yes, new accounts get full access to core features free for 14 days." },
@@ -348,10 +348,10 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
                   transition={{ duration: 0.5, delay: (i % 2) * 0.1 }}
-                  className="rounded-2xl border border-white/10 bg-[#141414]/70 p-6 backdrop-blur-xl transition-colors duration-300 hover:border-[#C67B52]/30"
+                  className="rounded-2xl border border-white/10 bg-[#1E293B]/70 p-6 backdrop-blur-xl transition-colors duration-300 hover:border-[#7C3AED]/30"
                 >
                   <div className="mb-2 flex items-start gap-3">
-                    <HelpCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#C67B52]" aria-hidden="true" />
+                    <HelpCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#7C3AED]" aria-hidden="true" />
                     <h3 className="font-semibold text-white">{item.q}</h3>
                   </div>
                   <p className="pl-8 text-sm leading-relaxed text-gray-400">{item.a}</p>
@@ -363,9 +363,9 @@ const Contact = () => {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-[#C67B52]/20 bg-[#0F1115] text-white">
+      <footer className="border-t border-[#7C3AED]/20 bg-[#0F172A] text-white">
         <div className="py-4 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} Fitvia • All Rights reserved.
+          © {new Date().getFullYear()} FitNova • All Rights reserved.
         </div>
       </footer>
     </>
@@ -395,9 +395,9 @@ function AmbientBackground() {
             "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
         }}
       />
-      <div className="pointer-events-none absolute -top-24 left-0 h-80 w-80 rounded-full bg-[#C67B52]/20 blur-[120px] animate-aurora-1" />
-      <div className="pointer-events-none absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#8C4A2F]/20 blur-[140px] animate-aurora-2" />
-      <div className="pointer-events-none absolute top-1/2 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-[#E6B18A]/10 blur-[130px] animate-[glow_6s_ease-in-out_infinite]" />
+      <div className="pointer-events-none absolute -top-24 left-0 h-80 w-80 rounded-full bg-[#7C3AED]/20 blur-[120px] animate-aurora-1" />
+      <div className="pointer-events-none absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#5B21B6]/20 blur-[140px] animate-aurora-2" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-[#A78BFA]/10 blur-[130px] animate-[glow_6s_ease-in-out_infinite]" />
 
       <div className="pointer-events-none absolute inset-0 hidden overflow-hidden md:block">
         {Array.from({ length: 12 }).map((_, i) => {
@@ -407,7 +407,7 @@ function AmbientBackground() {
           return (
             <span
               key={i}
-              className="animate-particle absolute rounded-full bg-[#F3D0B2]/40"
+              className="animate-particle absolute rounded-full bg-[#C4B5FD]/40"
               style={{
                 left: `${left}%`,
                 bottom: "-10px",
@@ -427,7 +427,7 @@ function AmbientBackground() {
 function FloatingIcon({ icon: Icon, className, delay }) {
   return (
     <span
-      className={`absolute flex h-9 w-9 items-center justify-center rounded-xl border border-[#C67B52]/25 bg-white/5 text-[#F3D0B2] backdrop-blur-xl animate-float-slow ${className}`}
+      className={`absolute flex h-9 w-9 items-center justify-center rounded-xl border border-[#7C3AED]/25 bg-white/5 text-[#C4B5FD] backdrop-blur-xl animate-float-slow ${className}`}
       style={{ animationDelay: `${delay}s` }}
     >
       <Icon className="h-4 w-4" aria-hidden="true" />
@@ -440,7 +440,7 @@ function FloatingIcon({ icon: Icon, className, delay }) {
 function GlassPanel({ children, className = "" }) {
   return (
     <div
-      className={`rounded-3xl border border-[#C67B52]/20 bg-white/5 p-6 backdrop-blur-2xl shadow-[0_0_35px_rgba(198,123,82,0.12)] sm:p-8 ${className}`}
+      className={`rounded-3xl border border-[#7C3AED]/20 bg-white/5 p-6 backdrop-blur-2xl shadow-[0_0_35px_rgba(198,123,82,0.12)] sm:p-8 ${className}`}
     >
       {children}
     </div>
@@ -450,8 +450,8 @@ function GlassPanel({ children, className = "" }) {
 function InfoRow({ icon: Icon, label, value }) {
   return (
     <div className="flex items-start gap-3">
-      <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#C67B52]/25 bg-[#C67B52]/10">
-        <Icon className="h-4 w-4 text-[#F3D0B2]" aria-hidden="true" />
+      <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#7C3AED]/25 bg-[#7C3AED]/10">
+        <Icon className="h-4 w-4 text-[#C4B5FD]" aria-hidden="true" />
       </div>
       <div className="min-w-0">
         <div className="text-[11px] uppercase tracking-wide text-gray-500">{label}</div>
@@ -463,21 +463,21 @@ function InfoRow({ icon: Icon, label, value }) {
 
 function LiveStatusBadge() {
   return (
-    <span className="flex items-center gap-1.5 rounded-full border border-[#C67B52]/20 bg-[#C67B52]/10 px-2.5 py-1">
+    <span className="flex items-center gap-1.5 rounded-full border border-[#7C3AED]/20 bg-[#7C3AED]/10 px-2.5 py-1">
       <span className="relative flex h-1.5 w-1.5">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#F3D0B2] opacity-75" />
-        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#F3D0B2]" />
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#C4B5FD] opacity-75" />
+        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#C4B5FD]" />
       </span>
-      <span className="text-[10px] font-medium text-[#F3D0B2]">Support Online</span>
+      <span className="text-[10px] font-medium text-[#C4B5FD]">Support Online</span>
     </span>
   );
 }
 
 function TrustCard({ icon: Icon, title, body }) {
   return (
-    <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-[#141414]/60 p-5 backdrop-blur-xl transition-colors duration-300 hover:border-[#C67B52]/30">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#C67B52]/25 bg-[#C67B52]/10">
-        <Icon className="h-5 w-5 text-[#F3D0B2]" aria-hidden="true" />
+    <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-[#1E293B]/60 p-5 backdrop-blur-xl transition-colors duration-300 hover:border-[#7C3AED]/30">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#7C3AED]/25 bg-[#7C3AED]/10">
+        <Icon className="h-5 w-5 text-[#C4B5FD]" aria-hidden="true" />
       </div>
       <div className="min-w-0">
         <div className="text-sm font-semibold text-white">{title}</div>
@@ -490,7 +490,7 @@ function TrustCard({ icon: Icon, title, body }) {
 function SectionHeading({ eyebrow, title }) {
   return (
     <div className="mx-auto max-w-2xl text-center">
-      <div className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-[#F3D0B2] sm:text-sm">
+      <div className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-[#C4B5FD] sm:text-sm">
         {eyebrow}
       </div>
       <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -514,11 +514,11 @@ function FloatingInput({ id, name, type = "text", label, value, onChange, disabl
         disabled={disabled}
         required={required}
         placeholder=" "
-        className="peer w-full rounded-xl border border-white/10 bg-white/3 px-4 pb-2.5 pt-6 text-white outline-none transition-all duration-300 placeholder-transparent focus:border-[#C67B52]/60 focus:bg-white/5 focus:shadow-[0_0_0_3px_rgba(198,123,82,0.15)] disabled:opacity-50"
+        className="peer w-full rounded-xl border border-white/10 bg-white/3 px-4 pb-2.5 pt-6 text-white outline-none transition-all duration-300 placeholder-transparent focus:border-[#7C3AED]/60 focus:bg-white/5 focus:shadow-[0_0_0_3px_rgba(198,123,82,0.15)] disabled:opacity-50"
       />
       <label
         htmlFor={id}
-        className="pointer-events-none absolute left-4 top-4 text-base text-gray-500 transition-all duration-300 peer-focus:top-2 peer-focus:text-xs peer-focus:text-[#E6B18A] peer-not-placeholder-shown:top-2 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-gray-400"
+        className="pointer-events-none absolute left-4 top-4 text-base text-gray-500 transition-all duration-300 peer-focus:top-2 peer-focus:text-xs peer-focus:text-[#A78BFA] peer-not-placeholder-shown:top-2 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-gray-400"
       >
         {label}
       </label>
@@ -538,11 +538,11 @@ function FloatingTextarea({ id, name, label, value, onChange, disabled, maxLengt
         onChange={onChange}
         disabled={disabled}
         placeholder=" "
-        className="peer w-full resize-none rounded-xl border border-white/10 bg-white/3 px-4 pb-7 pt-6 text-white outline-none transition-all duration-300 placeholder-transparent focus:border-[#C67B52]/60 focus:bg-white/5 focus:shadow-[0_0_0_3px_rgba(198,123,82,0.15)] disabled:opacity-50"
+        className="peer w-full resize-none rounded-xl border border-white/10 bg-white/3 px-4 pb-7 pt-6 text-white outline-none transition-all duration-300 placeholder-transparent focus:border-[#7C3AED]/60 focus:bg-white/5 focus:shadow-[0_0_0_3px_rgba(198,123,82,0.15)] disabled:opacity-50"
       />
       <label
         htmlFor={id}
-        className="pointer-events-none absolute left-4 top-4 text-base text-gray-500 transition-all duration-300 peer-focus:top-2 peer-focus:text-xs peer-focus:text-[#E6B18A] peer-not-placeholder-shown:top-2 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-gray-400"
+        className="pointer-events-none absolute left-4 top-4 text-base text-gray-500 transition-all duration-300 peer-focus:top-2 peer-focus:text-xs peer-focus:text-[#A78BFA] peer-not-placeholder-shown:top-2 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-gray-400"
       >
         {label}
       </label>
@@ -558,7 +558,7 @@ function SubmitButton({ isLoading }) {
     <button
       type="submit"
       disabled={isLoading}
-      className="group relative mt-1 flex items-center justify-center gap-2 overflow-hidden rounded-full bg-linear-to-r from-[#E6B18A] via-[#C67B52] to-[#8C4A2F] py-3.5 font-semibold text-white shadow-[0_10px_30px_rgba(198,123,82,.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_15px_40px_rgba(198,123,82,.5)] focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-[#F3D0B2] disabled:cursor-not-allowed disabled:opacity-70"
+      className="group relative mt-1 flex items-center justify-center gap-2 overflow-hidden rounded-full bg-linear-to-r from-[#A78BFA] via-[#7C3AED] to-[#5B21B6] py-3.5 font-semibold text-white shadow-[0_10px_30px_rgba(198,123,82,.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_15px_40px_rgba(198,123,82,.5)] focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-[#C4B5FD] disabled:cursor-not-allowed disabled:opacity-70"
     >
       <span className="pointer-events-none absolute inset-0 -translate-x-full skew-x-12 bg-linear-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
       <span className="relative flex items-center gap-2">

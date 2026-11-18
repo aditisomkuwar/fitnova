@@ -1,11 +1,7 @@
 import DailyProgress from "../models/DailyProgress.js";
 import User from "../models/userProfileModel.js";
 import { getWeekKey, normalizeDate } from "../utils/progressUtils.js";
-import OpenAI from "openai";
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-});
+import groq from "../config/groq.js";
 
 const MIN_DATA_POINTS = 3;
 
@@ -336,8 +332,8 @@ Create a simple weekly fitness plan including:
 `;
 
   try {
-    const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+    const response = await groq.chat.completions.create({
+      model: "llama-3.1-8b-instant",
       messages: [{ role: "user", content: prompt }],
     });
 

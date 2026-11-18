@@ -27,7 +27,7 @@ import {
 } from "lucide-react";
 
 /**
- * Fitvia — premium AI healthcare & fitness landing page.
+ * FitNova — premium AI healthcare & fitness landing page.
  * Design language: dark glass, aurora gradients in brushed copper/bronze,
  * restrained motion, and a signature "live analytics" dashboard as the hero's centerpiece.
  */
@@ -35,7 +35,7 @@ import {
 const Home = () => {
   return (
     <div
-      className="min-h-screen bg-[#0F1115] text-white relative overflow-hidden"
+      className="min-h-screen bg-[#0F172A] text-white relative overflow-hidden"
       style={{ fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif" }}
     >
       {/* Global fonts + custom keyframes (kept local to this file, Tailwind-only elsewhere) */}
@@ -110,9 +110,9 @@ export default Home;
 function AuroraBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      <div className="absolute -top-40 -left-40 w-xl h-144 bg-[#8C4A2F]/20 rounded-full blur-[120px] animate-aurora-1" />
-      <div className="absolute top-1/3 -right-40 w-160 h-160 bg-[#8C4A2F]/20 rounded-full blur-[130px] animate-aurora-2" />
-      <div className="absolute bottom-0 left-1/4 w-lg h-128 bg-[#181818]/15 rounded-full blur-[120px] animate-aurora-3" />
+      <div className="absolute -top-40 -left-40 w-xl h-144 bg-[#5B21B6]/20 rounded-full blur-[120px] animate-aurora-1" />
+      <div className="absolute top-1/3 -right-40 w-160 h-160 bg-[#5B21B6]/20 rounded-full blur-[130px] animate-aurora-2" />
+      <div className="absolute bottom-0 left-1/4 w-lg h-128 bg-[#1E293B]/15 rounded-full blur-[120px] animate-aurora-3" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(198,123,82,0.08),transparent_50%)]" />
     </div>
   );
@@ -144,7 +144,7 @@ function Particles() {
         return (
           <span
             key={i}
-            className="animate-particle absolute rounded-full bg-[#E6B18A]/40"
+            className="animate-particle absolute rounded-full bg-[#A78BFA]/40"
             style={{
               left: `${left}%`,
               bottom: "-20px",
@@ -193,10 +193,10 @@ function Hero() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="space-y-8 text-center md:text-left"
       >
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C67B52]/30 bg-[#C67B52]/5 text-[#F3D0B2] text-xs sm:text-sm font-medium backdrop-blur-xl">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#7C3AED]/30 bg-[#7C3AED]/5 text-[#C4B5FD] text-xs sm:text-sm font-medium backdrop-blur-xl">
           <span className="relative flex h-1.5 w-1.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C67B52] opacity-75" />
-            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#C67B52]" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7C3AED] opacity-75" />
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#7C3AED]" />
           </span>
           Powered by real-time health AI
         </div>
@@ -204,13 +204,13 @@ function Hero() {
         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
           <span className="text-white">Your body,</span>
           <br />
-          <span className="bg-linear-to-r from-[#E6B18A] via-[#C67B52] to-[#8C4A2F] bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-[#A78BFA] via-[#7C3AED] to-[#5B21B6] bg-clip-text text-transparent">
             decoded and optimized
           </span>
         </h1>
 
         <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
-          Fitvia reads your training, recovery, and nutrition signals in real
+          FitNova reads your training, recovery, and nutrition signals in real
           time — then rewrites your plan the moment your body asks for it.
         </p>
 
@@ -223,7 +223,7 @@ function Hero() {
 
         <div className="flex items-center gap-6 justify-center md:justify-start pt-4 text-gray-500 text-xs sm:text-sm">
           <div className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-[#C67B52]" />
+            <ShieldCheck className="w-4 h-4 text-[#7C3AED]" />
             HIPAA-aware &amp; encrypted
           </div>
           <div className="hidden sm:block w-px h-4 bg-white/10" />
@@ -239,8 +239,8 @@ function Hero() {
         className="relative flex justify-center items-center"
         style={{ perspective: "1000px" }}
       >
-        <div className="absolute w-72 sm:w-96 h-72 sm:h-96 bg-[#8C4A2F]/20 rounded-full blur-3xl animate-float-slow" />
-        <div className="absolute w-56 sm:w-72 h-56 sm:h-72 bg-[#8C4A2F]/15 rounded-full blur-3xl animate-float translate-x-16 translate-y-10" />
+        <div className="absolute w-72 sm:w-96 h-72 sm:h-96 bg-[#5B21B6]/20 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute w-56 sm:w-72 h-56 sm:h-72 bg-[#5B21B6]/15 rounded-full blur-3xl animate-float translate-x-16 translate-y-10" />
 
         <div
           ref={cardRef}
@@ -250,7 +250,7 @@ function Hero() {
           style={{ transformStyle: "preserve-3d" }}
         >
           <div className="absolute inset-0 pointer-events-none">
-            <div className="w-full h-20 bg-linear-to-b from-transparent via-[#C67B52]/10 to-transparent animate-scan" />
+            <div className="w-full h-20 bg-linear-to-b from-transparent via-[#7C3AED]/10 to-transparent animate-scan" />
           </div>
 
           <div className="relative z-10 space-y-5">
@@ -264,12 +264,12 @@ function Hero() {
                   Updated 2 min ago
                 </div>
               </div>
-              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#C67B52]/10 border border-[#C67B52]/20">
+              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/20">
                 <span className="relative flex h-1.5 w-1.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C67B52] opacity-75" />
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#C67B52]" />
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7C3AED] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#7C3AED]" />
                 </span>
-                <span className="text-[#F3D0B2] text-[10px] sm:text-xs font-medium">
+                <span className="text-[#C4B5FD] text-[10px] sm:text-xs font-medium">
                   Live
                 </span>
               </div>
@@ -277,23 +277,23 @@ function Hero() {
 
             {/* Rings row */}
             <div className="flex items-center justify-between px-1">
-              <RingMetric value={82} label="Recovery" gradientId="ringRecovery" colorFrom="#F3D0B2" colorTo="#C67B52" />
-              <RingMetric value={68} label="Sleep" gradientId="ringSleep" colorFrom="#C67B52" colorTo="#8C4A2F" />
-              <RingMetric value={91} label="Adherence" gradientId="ringAdherence" colorFrom="#E6B18A" colorTo="#F3D0B2" />
+              <RingMetric value={82} label="Recovery" gradientId="ringRecovery" colorFrom="#C4B5FD" colorTo="#7C3AED" />
+              <RingMetric value={68} label="Sleep" gradientId="ringSleep" colorFrom="#7C3AED" colorTo="#5B21B6" />
+              <RingMetric value={91} label="Adherence" gradientId="ringAdherence" colorFrom="#A78BFA" colorTo="#C4B5FD" />
             </div>
 
             {/* Daily progress bar */}
             <div className="space-y-1.5">
               <div className="flex justify-between text-[11px] sm:text-xs text-gray-400">
                 <span>Daily Progress</span>
-                <span className="text-[#F3D0B2] font-medium">78%</span>
+                <span className="text-[#C4B5FD] font-medium">78%</span>
               </div>
               <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: "78%" }}
                   transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
-                  className="h-full bg-linear-to-r from-[#E6B18A] via-[#C67B52] to-[#8C4A2F] rounded-full"
+                  className="h-full bg-linear-to-r from-[#A78BFA] via-[#7C3AED] to-[#5B21B6] rounded-full"
                 />
               </div>
             </div>
@@ -302,18 +302,18 @@ function Hero() {
             <div className="grid grid-cols-2 gap-3">
               <MetricTile icon={HeartPulse} label="Heart Rate" value="68" unit="bpm" tint="text-rose-300" />
               <MetricTile icon={Flame} label="Calories" value="1,842" unit="kcal" tint="text-orange-300" />
-              <MetricTile icon={Activity} label="BMI" value="22.4" unit="normal" tint="text-[#F3D0B2]" />
-              <MetricTile icon={Droplet} label="Water" value="2.1" unit="L / 3L" tint="text-[#E6B18A]" />
+              <MetricTile icon={Activity} label="BMI" value="22.4" unit="normal" tint="text-[#C4B5FD]" />
+              <MetricTile icon={Droplet} label="Water" value="2.1" unit="L / 3L" tint="text-[#A78BFA]" />
             </div>
 
             {/* AI recommendation */}
-            <div className="relative rounded-2xl p-px bg-linear-to-r from-[#E6B18A]/50 via-[#C67B52]/50 to-[#8C4A2F]/50">
-              <div className="rounded-2xl bg-[#0F1115]/90 backdrop-blur-xl p-3.5 flex gap-3 items-start">
-                <div className="shrink-0 w-7 h-7 rounded-lg bg-[#C67B52]/10 border border-[#C67B52]/20 flex items-center justify-center">
-                  <Sparkles className="w-3.5 h-3.5 text-[#F3D0B2]" />
+            <div className="relative rounded-2xl p-px bg-linear-to-r from-[#A78BFA]/50 via-[#7C3AED]/50 to-[#5B21B6]/50">
+              <div className="rounded-2xl bg-[#0F172A]/90 backdrop-blur-xl p-3.5 flex gap-3 items-start">
+                <div className="shrink-0 w-7 h-7 rounded-lg bg-[#7C3AED]/10 border border-[#7C3AED]/20 flex items-center justify-center">
+                  <Sparkles className="w-3.5 h-3.5 text-[#C4B5FD]" />
                 </div>
                 <div>
-                  <div className="text-[11px] sm:text-xs font-semibold text-[#F3D0B2] mb-0.5">
+                  <div className="text-[11px] sm:text-xs font-semibold text-[#C4B5FD] mb-0.5">
                     AI Recommendation
                   </div>
                   <p className="text-[11px] sm:text-xs text-gray-400 leading-relaxed">
@@ -378,7 +378,7 @@ function RingMetric({ value, label, gradientId, colorFrom, colorTo }) {
 
 function MetricTile({ icon: Icon, label, value, unit, tint }) {
   return (
-    <div className="bg-white/3 border border-white/10 rounded-xl p-3 hover:bg-white/6 hover:border-[#C67B52]/20 transition-colors duration-300">
+    <div className="bg-white/3 border border-white/10 rounded-xl p-3 hover:bg-white/6 hover:border-[#7C3AED]/20 transition-colors duration-300">
       <div className="flex items-center gap-1.5 mb-1.5">
         <Icon className={`w-3.5 h-3.5 ${tint}`} />
         <span className="text-[10px] sm:text-[11px] text-gray-500">{label}</span>
@@ -395,7 +395,7 @@ function PrimaryButton({ to, children }) {
   return (
     <Link
       to={to}
-      className="group relative inline-flex items-center justify-center gap-2 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-semibold text-sm sm:text-base text-[#0F1115] bg-linear-to-r from-[#E6B18A] via-[#C67B52] to-[#8C4A2F] overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-[0_0_30px_rgba(198,123,82,0.4)] hover:shadow-[0_0_45px_rgba(198,123,82,0.6)]"
+      className="group relative inline-flex items-center justify-center gap-2 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-semibold text-sm sm:text-base text-[#0F172A] bg-linear-to-r from-[#A78BFA] via-[#7C3AED] to-[#5B21B6] overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-[0_0_30px_rgba(198,123,82,0.4)] hover:shadow-[0_0_45px_rgba(198,123,82,0.6)]"
     >
       <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-linear-to-r from-transparent via-white/40 to-transparent skew-x-12" />
       <span className="relative flex items-center gap-2">{children}</span>
@@ -407,7 +407,7 @@ function SecondaryButton({ to, children }) {
   return (
     <Link
       to={to}
-      className="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full border border-white/15 text-gray-200 hover:text-white hover:bg-white/5 hover:border-[#C67B52]/30 transition-all duration-300 text-sm sm:text-base backdrop-blur-xl"
+      className="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full border border-white/15 text-gray-200 hover:text-white hover:bg-white/5 hover:border-[#7C3AED]/30 transition-all duration-300 text-sm sm:text-base backdrop-blur-xl"
     >
       {children}
     </Link>
@@ -428,11 +428,11 @@ function HowItWorks() {
 
   return (
     <section className="py-24 sm:py-32 px-6">
-      <SectionHeading eyebrow="The Loop" title="How Fitvia works" />
+      <SectionHeading eyebrow="The Loop" title="How FitNova works" />
 
       <div className="relative max-w-7xl mx-auto mt-16 sm:mt-20">
         {/* connecting line, desktop only */}
-        <div className="hidden lg:block absolute top-8 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#C67B52]/40 to-transparent" />
+        <div className="hidden lg:block absolute top-8 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#7C3AED]/40 to-transparent" />
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8">
           {steps.map((step, i) => (
@@ -444,9 +444,9 @@ function HowItWorks() {
               transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
               className="relative flex flex-col items-center text-center group"
             >
-              <div className="hidden relative z-10 w-16 h-16 rounded-2xl bg-white/4 border border-white/10 lg:flex items-center justify-center mb-5 backdrop-blur-xl group-hover:border-[#C67B52]/40 group-hover:bg-[#C67B52]/5 transition-all duration-300 group-hover:-translate-y-1 shadow-[0_0_0_rgba(0,0,0,0)] group-hover:shadow-[0_0_25px_rgba(198,123,82,0.25)]">
-                <step.icon className="w-6 h-6 text-[#E6B18A]" />
-                <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#0F1115] border border-[#C67B52]/30 text-[#F3D0B2] text-[10px] font-semibold flex items-center justify-center">
+              <div className="hidden relative z-10 w-16 h-16 rounded-2xl bg-white/4 border border-white/10 lg:flex items-center justify-center mb-5 backdrop-blur-xl group-hover:border-[#7C3AED]/40 group-hover:bg-[#7C3AED]/5 transition-all duration-300 group-hover:-translate-y-1 shadow-[0_0_0_rgba(0,0,0,0)] group-hover:shadow-[0_0_25px_rgba(198,123,82,0.25)]">
+                <step.icon className="w-6 h-6 text-[#A78BFA]" />
+                <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#0F172A] border border-[#7C3AED]/30 text-[#C4B5FD] text-[10px] font-semibold flex items-center justify-center">
                   {i + 1}
                 </span>
               </div>
@@ -470,12 +470,12 @@ function HowItWorks() {
 
 function Features() {
   const features = [
-    { icon: Dumbbell, title: "Adaptive Workouts", desc: "Plans auto-adjust using fatigue & adherence data.", accent: "from-[#E6B18A]/20 to-[#C67B52]/20" },
-    { icon: Utensils, title: "Smart Diet Generator", desc: "Macro-based personalized nutrition engine.", accent: "from-[#C67B52]/20 to-[#8C4A2F]/20" },
-    { icon: Brain, title: "Habit Intelligence", desc: "Consistency scoring & drop-off detection.", accent: "from-[#8C4A2F]/20 to-[#9CA3AF]/20" },
-    { icon: LineChart, title: "Progress Analytics", desc: "Weight trends & measurement tracking.", accent: "from-[#9CA3AF]/20 to-[#C67B52]/20" },
-    { icon: BatteryCharging, title: "Energy Monitoring", desc: "Prevent overtraining with smart recovery.", accent: "from-[#C67B52]/20 to-[#8C4A2F]/20" },
-    { icon: Target, title: "Goal Forecast", desc: "Predict timeline to reach your target.", accent: "from-[#C67B52]/20 to-[#9CA3AF]/20" },
+    { icon: Dumbbell, title: "Adaptive Workouts", desc: "Plans auto-adjust using fatigue & adherence data.", accent: "from-[#A78BFA]/20 to-[#7C3AED]/20" },
+    { icon: Utensils, title: "Smart Diet Generator", desc: "Macro-based personalized nutrition engine.", accent: "from-[#7C3AED]/20 to-[#5B21B6]/20" },
+    { icon: Brain, title: "Habit Intelligence", desc: "Consistency scoring & drop-off detection.", accent: "from-[#5B21B6]/20 to-[#9CA3AF]/20" },
+    { icon: LineChart, title: "Progress Analytics", desc: "Weight trends & measurement tracking.", accent: "from-[#9CA3AF]/20 to-[#7C3AED]/20" },
+    { icon: BatteryCharging, title: "Energy Monitoring", desc: "Prevent overtraining with smart recovery.", accent: "from-[#7C3AED]/20 to-[#5B21B6]/20" },
+    { icon: Target, title: "Goal Forecast", desc: "Predict timeline to reach your target.", accent: "from-[#7C3AED]/20 to-[#9CA3AF]/20" },
   ];
 
   return (
@@ -490,13 +490,13 @@ function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: (i % 3) * 0.08, ease: "easeOut" }}
-            className="group relative rounded-3xl p-px bg-linear-to-br from-white/10 to-white/0 hover:from-[#C67B52]/40 hover:to-[#8C4A2F]/20 transition-all duration-300"
+            className="group relative rounded-3xl p-px bg-linear-to-br from-white/10 to-white/0 hover:from-[#7C3AED]/40 hover:to-[#5B21B6]/20 transition-all duration-300"
           >
             <div className="relative h-full bg-white/3 backdrop-blur-2xl rounded-3xl p-8 sm:p-9 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:bg-white/5 overflow-hidden">
               <div className={`absolute -top-10 -right-10 w-32 h-32 rounded-full bg-linear-to-br ${f.accent} blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
-              <div className="relative w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-[#C67B52]/30 transition-colors duration-300">
-                <f.icon className="w-6 h-6 text-[#F3D0B2]" />
+              <div className="relative w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-[#7C3AED]/30 transition-colors duration-300">
+                <f.icon className="w-6 h-6 text-[#C4B5FD]" />
               </div>
 
               <h3 className="relative text-lg sm:text-xl font-semibold mb-3 text-white font-display">
@@ -518,7 +518,7 @@ function Features() {
 function SectionHeading({ eyebrow, title }) {
   return (
     <div className="text-center max-w-2xl mx-auto">
-      <div className="text-[#F3D0B2] text-xs sm:text-sm font-medium tracking-[0.2em] uppercase mb-4">
+      <div className="text-[#C4B5FD] text-xs sm:text-sm font-medium tracking-[0.2em] uppercase mb-4">
         {eyebrow}
       </div>
       <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
@@ -540,16 +540,16 @@ function Footer() {
 
   return (
     <footer className="relative mt-12">
-      <div className="h-px w-full bg-linear-to-r from-transparent via-[#C67B52]/30 to-transparent" />
+      <div className="h-px w-full bg-linear-to-r from-transparent via-[#7C3AED]/30 to-transparent" />
       <div className="max-w-7xl mx-auto px-6 py-10 sm:py-12 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2.5">
           <img
             src="/assets/fitvia-logo.png"
-            alt="Fitvia"
+            alt="FitNova"
             className="w-8 h-8 object-contain"
           />
           <span className="font-display font-semibold text-white text-sm sm:text-base">
-            Fitvia
+            FitNova
           </span>
         </div>
 
@@ -559,7 +559,7 @@ function Footer() {
               key={s.label}
               href={s.href}
               aria-label={s.label}
-              className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#F3D0B2] hover:border-[#C67B52]/30 hover:bg-[#C67B52]/5 transition-all duration-300"
+              className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#C4B5FD] hover:border-[#7C3AED]/30 hover:bg-[#7C3AED]/5 transition-all duration-300"
             >
               <s.icon className="w-4 h-4" />
             </a>
@@ -567,7 +567,7 @@ function Footer() {
         </div>
 
         <div className="text-gray-500 text-xs sm:text-sm tracking-wide text-center">
-          © {new Date().getFullYear()} Fitvia • All Rights reserved.
+          © {new Date().getFullYear()} FitNova • All Rights reserved.
         </div>
       </div>
     </footer>

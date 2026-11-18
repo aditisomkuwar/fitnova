@@ -17,7 +17,7 @@ export const validateAIRequest = (req, res, next) => {
   const { type } = req.body;
 
   if (!type || !allowedTypes.includes(type)) {
-    const error = new Error("HealthUP AI only accepts structured fitness requests.");
+    const error = new Error("FitNova AI only accepts structured fitness requests.");
     error.statusCode = 400;
     return next(error);
   }
